@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/linearLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:background="#F1F4F8">
 
     <TextView
         android:id="@+id/textView2"
@@ -164,10 +165,14 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="59dp"
-        android:layout_height="51dp"
+        android:layout_width="31dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="8dp"
+        android:rotationY="180"
+        app:layout_constraintEnd_toStartOf="@+id/textView5"
+        app:layout_constraintHorizontal_bias="0.319"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="?attr/homeAsUpIndicator" />
+        app:srcCompat="@drawable/arrow_logo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
