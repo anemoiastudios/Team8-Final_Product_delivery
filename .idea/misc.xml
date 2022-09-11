@@ -4,10 +4,13 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Owner/AndroidStudioProjects/MYWApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.266" />
+        <entry key="..\:/Users/Owner/AndroidStudioProjects/MYWApp/app/src/main/res/drawable/cancel_appt_button.xml" value="0.325" />
         <entry key="..\:/Users/Owner/AndroidStudioProjects/MYWApp/app/src/main/res/drawable/edit_profile_button.xml" value="0.265" />
         <entry key="..\:/Users/Owner/AndroidStudioProjects/MYWApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.266" />
         <entry key="..\:/Users/Owner/AndroidStudioProjects/MYWApp/app/src/main/res/layout/activity_main.xml" value="0.2609375" />
-        <entry key="..\:/Users/Owner/AndroidStudioProjects/MYWApp/app/src/main/res/layout/edit_profile.xml" value="0.25" />
+        <entry key="..\:/Users/Owner/AndroidStudioProjects/MYWApp/app/src/main/res/layout/appointment_details.xml" value="0.33" />
+        <entry key="..\:/Users/Owner/AndroidStudioProjects/MYWApp/app/src/main/res/layout/edit_profile.xml" value="0.33" />
+        <entry key="..\:/Users/Owner/AndroidStudioProjects/MYWApp/app/src/main/res/layout/my_appointments.xml" value="0.67" />
       </map>
     </option>
   </component>
