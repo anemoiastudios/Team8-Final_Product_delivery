@@ -19,11 +19,12 @@
 
     <Button
         android:id="@+id/saveChangeButton"
-        android:layout_width="230dp"
-        android:layout_height="50dp"
-        android:background="@drawable/edit_profile_button"
+        android:layout_width="226dp"
+        android:layout_height="63dp"
+        android:backgroundTint="#4B39EF"
         android:onClick="saveChanges"
         android:text="Save Changes"
+        app:cornerRadius="45dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -111,16 +112,16 @@
 
     <Button
         android:id="@+id/changePhotoButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="185dp"
+        android:layout_height="53dp"
         android:backgroundTint="#F1F4F8"
         android:onClick="changePhoto"
         android:shadowColor="#000000"
         android:shadowDx="0"
         android:shadowDy="0"
-        android:shadowRadius="0"
         android:text="Change Photo"
         android:textColor="#000000"
+        app:cornerRadius="10dp"
         app:layout_constraintBottom_toTopOf="@+id/displayNameLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -131,13 +132,14 @@
         android:id="@+id/imageView"
         android:layout_width="102dp"
         android:layout_height="93dp"
+        android:background="#EF0303"
+        android:hapticFeedbackEnabled="true"
         app:layout_constraintBottom_toTopOf="@+id/changePhotoButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.818"
-        app:srcCompat="@drawable/edit_profile_button" />
+        app:layout_constraintVertical_bias="0.818" />
 
     <TextView
         android:id="@+id/textView4"
