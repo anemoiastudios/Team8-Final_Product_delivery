@@ -107,21 +107,23 @@
         android:layout_width="249dp"
         android:layout_height="51dp"
         android:layout_marginBottom="116dp"
-        android:text="Reschedule"
+        android:backgroundTint="@color/white"
+        android:text="Cancel Appointment"
         android:textColor="#DF3F3F"
+        app:cornerRadius="45dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/saveChangeButton2"
-        android:layout_width="304dp"
-        android:layout_height="48dp"
-        android:background="@drawable/edit_profile_button"
+        android:layout_width="303dp"
+        android:layout_height="59dp"
+        android:backgroundTint="#4B39EF"
         android:text="Reschedule"
+        app:cornerRadius="45dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.514"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.696" />
@@ -152,10 +154,10 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:layout_width="391dp"
-        android:layout_height="51dp"
+        android:layout_width="390dp"
+        android:layout_height="68dp"
         android:layout_marginTop="288dp"
-        android:text="Button"
+        android:text="[appointmentName]"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
