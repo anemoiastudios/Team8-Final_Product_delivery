@@ -13,9 +13,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
+        android:fontFamily="@font/outfit_light"
         android:text="[appointmentType]"
         android:textColor="#000000"
-        android:textSize="22dp"
+        android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.062"
@@ -27,13 +28,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="204dp"
+        android:fontFamily="@font/outfit_light"
         android:shadowColor="#707070"
         android:text="[appointmentDescription]"
         android:textColor="#5E5E5E"
-        android:textSize="22dp"
+        android:textSize="16dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.088"
+        app:layout_constraintHorizontal_bias="0.068"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -42,6 +44,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="256dp"
+        android:fontFamily="@font/outfit_light"
         android:text="For"
         android:textColor="#000000"
         android:textSize="16dp"
@@ -55,6 +58,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="364dp"
+        android:fontFamily="@font/outfit_light"
         android:text="When"
         android:textColor="#000000"
         android:textSize="16dp"
@@ -68,11 +72,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="400dp"
+        android:fontFamily="@font/outfit_light"
         android:text="[MMdd][jm]"
         android:textColor="#000000"
         android:textSize="16dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.043"
+        app:layout_constraintHorizontal_bias="0.056"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -81,6 +87,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="172dp"
+        android:fontFamily="@font/outfit_light"
         android:text="What's the problem?"
         android:textColor="#000000"
         android:textSize="16dp"
@@ -94,11 +101,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="68dp"
+        android:fontFamily="@font/outfit_light"
         android:text="Type of Appointment"
         android:textColor="#000000"
         android:textSize="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintHorizontal_bias="0.069"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -108,6 +116,7 @@
         android:layout_height="51dp"
         android:layout_marginBottom="116dp"
         android:backgroundTint="@color/white"
+        android:fontFamily="@font/outfit_regular"
         android:text="Cancel Appointment"
         android:textColor="#DF3F3F"
         app:cornerRadius="45dp"
@@ -120,6 +129,7 @@
         android:layout_width="303dp"
         android:layout_height="59dp"
         android:backgroundTint="#4B39EF"
+        android:fontFamily="@font/outfit_bold"
         android:text="Reschedule"
         app:cornerRadius="45dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -153,14 +163,44 @@
         app:layout_constraintStart_toEndOf="@+id/imageView3"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:layout_width="390dp"
-        android:layout_height="68dp"
-        android:layout_marginTop="288dp"
-        android:text="[appointmentName]"
+    <androidx.cardview.widget.CardView
+        android:layout_width="378dp"
+        android:layout_height="67dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintHorizontal_bias="0.515"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.43" >
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="[appointmentName]"
+            android:textColor="#1A1F24"
+            android:textSize="16sp"
+            android:translationX="125dp"
+            android:translationY="10dp" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="[appointmentEmail]"
+            android:textColor="#4B39EF"
+            android:textSize="16sp"
+            android:translationX="125dp"
+            android:translationY="30dp" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="53dp"
+            android:layout_height="44dp"
+            android:background="#EF0303"
+            android:hapticFeedbackEnabled="true"
+            android:translationX="25sp"
+            android:translationY="12dp" />
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
