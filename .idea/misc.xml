@@ -31,6 +31,7 @@
         <entry key="app/src/main/res/drawable/forgot_button.xml" value="0.1415" />
         <entry key="app/src/main/res/drawable/login_button.xml" value="0.1415" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25364583333333335" />
+        <entry key="app/src/main/res/layout/activity_profile_page.xml" value="0.25364583333333335" />
         <entry key="app/src/main/res/layout/activity_rand_iactivity.xml" value="0.25364583333333335" />
         <entry key="app/src/main/res/layout/appointment_details.xml" value="0.25364583333333335" />
         <entry key="app/src/main/res/layout/edit_profile.xml" value="0.25364583333333335" />
