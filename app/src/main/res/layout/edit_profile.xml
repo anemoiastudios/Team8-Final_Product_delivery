@@ -11,6 +11,7 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/outfit_regular"
         android:text="Your Age"
         app:layout_constraintBottom_toTopOf="@+id/displayAgeLayout"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,8 +23,10 @@
         android:layout_width="226dp"
         android:layout_height="63dp"
         android:backgroundTint="#4B39EF"
+        android:fontFamily="@font/outfit_medium"
         android:onClick="saveChanges"
         android:text="Save Changes"
+        android:textSize="18dp"
         app:cornerRadius="45dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,6 +39,7 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/outfit_regular"
         android:text="Email Address"
         app:layout_constraintBottom_toTopOf="@+id/displayEmailLayout"
         app:layout_constraintEnd_toEndOf="parent"
@@ -60,6 +64,7 @@
             android:id="@+id/displayAgeInput"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:fontFamily="@font/outfit_regular"
             android:hint="[age]" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -83,6 +88,7 @@
             android:id="@+id/displayEmailInput"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:fontFamily="@font/outfit_regular"
             android:hint="[Email]"
             tools:ignore="TouchTargetSizeCheck" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -107,6 +113,7 @@
             android:id="@+id/displayNameInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/outfit_regular"
             android:hint="[display_name]" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -145,6 +152,7 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/outfit_regular"
         android:text="Your Name"
         app:layout_constraintBottom_toTopOf="@+id/displayNameLayout"
         app:layout_constraintEnd_toEndOf="parent"
@@ -157,6 +165,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
+        android:fontFamily="@font/outfit_regular"
         android:text="Edit Profile"
         android:textColor="#000000"
         android:textSize="20sp"
