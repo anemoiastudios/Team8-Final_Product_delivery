@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">MYW-App</string>
+    <string name="resources_and_information">Resources and Information</string>
+    <string name="r_and_i_title">R and I Title</string>
+    <string name="r_and_i_description">R and I Description</string>
 </resources>
