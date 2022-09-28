@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
 
-    android:id="@+id/rAndICardItem"
+    android:id="@+id/rAndICardView"
     android:layout_margin="10dp"
     android:elevation="3dp"
     app:cardCornerRadius="4dp"
@@ -36,10 +36,10 @@
             android:layout_height="wrap_content"
 
             android:layout_below="@id/rAndITitleTextView"
-            android:paddingTop="5dp"
-
-            android:text="@string/r_and_i_description"
             android:fontFamily="@font/outfit_medium"
+
+            android:paddingTop="5dp"
+            android:text="@string/r_and_i_description"
             android:textSize="18sp"
 
             />
