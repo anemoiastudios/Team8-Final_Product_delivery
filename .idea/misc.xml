@@ -29,6 +29,7 @@
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1415" />
         <entry key="app/src/main/res/drawable/enterbox.xml" value="0.1415" />
         <entry key="app/src/main/res/drawable/forgot_button.xml" value="0.1415" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.15" />
         <entry key="app/src/main/res/drawable/login_button.xml" value="0.1415" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25364583333333335" />
         <entry key="app/src/main/res/layout/activity_profile_page.xml" value="0.25364583333333335" />
@@ -36,6 +37,7 @@
         <entry key="app/src/main/res/layout/appointment_details.xml" value="0.25364583333333335" />
         <entry key="app/src/main/res/layout/edit_profile.xml" value="0.25364583333333335" />
         <entry key="app/src/main/res/layout/login.xml" value="0.25364583333333335" />
+        <entry key="app/src/main/res/layout/randi_item.xml" value="0.2526041666666667" />
       </map>
     </option>
   </component>
