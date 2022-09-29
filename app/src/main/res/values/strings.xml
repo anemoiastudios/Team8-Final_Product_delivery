@@ -3,4 +3,6 @@
     <string name="resources_and_information">Resources and Information</string>
     <string name="r_and_i_title">R and I Title</string>
     <string name="r_and_i_description">R and I Description</string>
+    <string name="display_name">[display_Name]</string>
+    <string name="age">[age]</string>
 </resources>
