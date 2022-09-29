@@ -12,6 +12,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     // private RecyclerView rAndIRecyclerView;
+    // private RecyclerView journalRecyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,8 +22,13 @@ public class MainActivity extends AppCompatActivity {
         //getSupportActionBar().hide(); //hides top bar
         System.out.println("Hello");
         super.onCreate(savedInstanceState);
-        // setContentView(R.layout.edit_profile);
+
+
+
+
+        setContentView(R.layout.edit_profile);
         // setContentView(R.layout.activity_rand_iactivity);
+        // setContentView(R.layout.activity_profile_page);
 
         /*
         rAndIRecyclerView = findViewById(R.id.rAndIRecyclerView);
@@ -38,6 +44,26 @@ public class MainActivity extends AppCompatActivity {
 
         rAndIRecyclerView.setAdapter(adapter);
         rAndIRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+         */
+
+
+        /*
+        journalRecyclerView = findViewById(R.id.journalRecyclerView);
+
+        ArrayList<Journal> journals = new ArrayList<>();
+
+        journals.add(new Journal("This is the first journal", "This is a journal entry"));
+        journals.add(new Journal("This is the second journal", "1234213"));
+        journals.add(new Journal("This is the third journal", "asdua"));
+        journals.add(new Journal("This is the fourth journal", "asdadasd"));
+        journals.add(new Journal("This is the fifth journal", "asdadasd"));
+
+        JournalRecyclerViewAdapter adapter = new JournalRecyclerViewAdapter(this);
+        adapter.setJournals(journals);
+
+        journalRecyclerView.setAdapter(adapter);
+        journalRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+
          */
     }
 }
