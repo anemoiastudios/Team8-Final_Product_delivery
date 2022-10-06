@@ -63,7 +63,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/Title"
-                android:text="Write Here..."
+                android:text="Write Here..." />
 
 
         </RelativeLayout>
@@ -100,7 +100,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/Title2"
-                android:text="Write Here..."
+                android:text="Write Here..."/>
 
 
         </RelativeLayout>
@@ -137,7 +137,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/Title3"
-                android:text="Write Here..."
+                android:text="Write Here..." />
 
 
         </RelativeLayout>
@@ -175,6 +175,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/Title4"
                 android:text="Write Here..."
+                />
 
 
         </RelativeLayout>
