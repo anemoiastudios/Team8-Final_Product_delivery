@@ -17,15 +17,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.05"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView29" />
+        app:layout_constraintTop_toBottomOf="@+id/resultItemCount" />
 
     <TextView
-        android:id="@+id/textView31"
+        android:id="@+id/vitalItemsCount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0 items"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.043"
+        app:layout_constraintHorizontal_bias="0.049"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView30" />
 
@@ -40,10 +40,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.052"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView27" />
+        app:layout_constraintTop_toBottomOf="@+id/medicationItemCount" />
 
     <TextView
-        android:id="@+id/textView29"
+        android:id="@+id/resultItemCount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0 items"
@@ -66,7 +66,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView25" />
 
     <TextView
-        android:id="@+id/textView27"
+        android:id="@+id/medicationItemCount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0 items"
@@ -86,10 +86,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias=".058"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView22" />
+        app:layout_constraintTop_toBottomOf="@+id/conditionsItemCount" />
 
     <TextView
-        android:id="@+id/textView24"
+        android:id="@+id/documentItemCount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0 items"
@@ -109,7 +109,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.064"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView24" />
+        app:layout_constraintTop_toBottomOf="@+id/documentItemCount" />
 
     <TextView
         android:id="@+id/textView20"
@@ -122,10 +122,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias=".058"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView21" />
+        app:layout_constraintTop_toBottomOf="@+id/allergiesItemCount" />
 
     <TextView
-        android:id="@+id/textView22"
+        android:id="@+id/conditionsItemCount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0 items"
@@ -135,7 +135,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView20" />
 
     <TextView
-        android:id="@+id/textView21"
+        android:id="@+id/allergiesItemCount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0 items"
@@ -145,7 +145,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView"
+        android:id="@+id/navbar"
         android:layout_width="0dp"
         android:layout_height="80dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -156,7 +156,7 @@
         app:layout_constraintVertical_bias="1.0">
 
         <ImageView
-            android:id="@+id/imageView13"
+            android:id="@+id/moreImage"
             android:layout_width="35dp"
             android:layout_height="45dp"
             android:translationX="350dp"
@@ -173,7 +173,7 @@
             android:translationY="45dp" />
 
         <ImageView
-            android:id="@+id/imageView12"
+            android:id="@+id/apointmentImage"
             android:layout_width="35dp"
             android:layout_height="45dp"
             android:translationX="270dp"
@@ -190,11 +190,11 @@
             android:translationY="45dp" />
 
         <ImageView
-            android:id="@+id/imageView11"
+            android:id="@+id/healthImage"
             android:layout_width="40dp"
             android:layout_height="45dp"
             android:translationX="180dp"
-            tools:srcCompat="@drawable/my_health_icon_color" />
+            app:srcCompat="@drawable/my_health_icon_color" />
         <!--            app:srcCompat="@drawable/my_health_icon" -->
 
         <TextView
@@ -208,7 +208,7 @@
             android:translationY="45dp" />
 
         <ImageView
-            android:id="@+id/imageView9"
+            android:id="@+id/messageImage"
             android:layout_width="35dp"
             android:layout_height="45dp"
             android:translationX="100dp"
@@ -225,7 +225,7 @@
             android:translationY="45dp" />
 
         <ImageView
-            android:id="@+id/imageView8"
+            android:id="@+id/homeImage"
             android:layout_width="35dp"
             android:layout_height="45dp"
             android:translationX="25dp"
@@ -278,13 +278,13 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/imageView7"
+            android:id="@+id/shareIconImage"
             android:layout_width="37dp"
             android:layout_height="35dp"
             android:layout_marginTop="40dp"
             android:translationX="350dp"
             android:translationY="-20dp"
-            app:srcCompat="@drawable/house_icon" />
+            app:srcCompat="@drawable/share_icon" />
 
         <TextView
             android:id="@+id/textView15"
