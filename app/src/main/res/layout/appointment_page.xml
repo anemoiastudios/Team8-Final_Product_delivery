@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/upcomingButton"
+    android:id="@+id/Layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:backgroundTint="#FFFFFF">
@@ -183,7 +183,6 @@
         android:layout_height="49dp"
         android:layout_marginTop="12dp"
         android:backgroundTint="#DFDFDF"
-        android:onClick="updatePast"
         android:text="Past"
         android:textColor="#027989"
         app:cornerRadius="5dp"
@@ -197,7 +196,6 @@
         android:layout_height="49dp"
         android:layout_marginTop="12dp"
         android:backgroundTint="#DFDFDF"
-        android:onClick="updateOther"
         android:text="Other"
         android:textColor="#027989"
         app:cornerRadius="5dp"
@@ -207,12 +205,11 @@
         app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/upcomingButton"
         android:layout_width="124dp"
         android:layout_height="49dp"
         android:layout_marginTop="12dp"
         android:backgroundTint="#027989"
-        android:onClick="updateUpcoming"
         android:text="Upcoming"
         app:cornerRadius="5dp"
         app:layout_constraintEnd_toEndOf="parent"
