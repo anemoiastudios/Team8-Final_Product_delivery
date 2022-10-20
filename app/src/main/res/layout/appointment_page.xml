@@ -15,10 +15,11 @@
         app:cardCornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pastButton">
+        app:layout_constraintTop_toBottomOf="@+id/pastButton"
+        app:layout_constraintVertical_bias="0.013">
 
         <TextView
-            android:id="@+id/Day_monthh_year_Text"
+            android:id="@+id/day_month_year_Text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Wedesday, November 31, 2030"
