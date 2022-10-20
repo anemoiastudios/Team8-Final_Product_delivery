@@ -34,10 +34,10 @@ public class Appointment_page_activity extends AppCompatActivity {
 
 
 
-        pastButton = findViewById(R.id.pastButton);
-        otherButton = findViewById(R.id.otherButton);
-        upcomingButton = findViewById(R.id.upcomingButton);
-
+//        pastButton = findViewById(R.id.pastButton);
+//        otherButton = findViewById(R.id.otherButton);
+//        upcomingButton = findViewById(R.id.upcomingButton);
+//
 //        pastButton.setOnClickListener(new View.OnClickListener() {
 //
 //            @Override
