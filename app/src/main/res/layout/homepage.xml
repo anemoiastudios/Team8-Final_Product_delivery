@@ -11,7 +11,7 @@
         android:background="#027989"
         android:gravity="center"
         android:paddingTop="30dp"
-        android:text="FollowMyHealth®"
+        android:text="Mind Ya Wellness"
         android:textColor="@color/white"
         android:textSize="16sp" />
 
@@ -20,7 +20,7 @@
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="290dp"
+        android:layout_marginTop="270dp"
         android:backgroundTint="#027989"
         android:drawableLeft="@drawable/keypad"
         android:text="Sign In using Passcode"
@@ -100,8 +100,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="30dp"
-        android:text="                        FollowMyHealth®\n© 2022 Allscripts Healthcare Solutions, Inc.\n                   Version 22.3.1 Build 1051"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"/>
+        //android:text="                        FollowMyHealth®\n© 2022 Allscripts Healthcare Solutions, Inc.\n                   Version 22.3.1 Build 1051" />
 
 </RelativeLayout>
