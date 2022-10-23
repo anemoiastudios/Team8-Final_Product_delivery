@@ -34,54 +34,54 @@ public class Appointment_page_activity extends AppCompatActivity {
 
 
 
-//        pastButton = findViewById(R.id.pastButton);
-//        otherButton = findViewById(R.id.otherButton);
-//        upcomingButton = findViewById(R.id.upcomingButton);
-//
-//        pastButton.setOnClickListener(new View.OnClickListener() {
-//
-//            @Override
-//            public void onClick(View view) {
-//                pastButton.setBackgroundColor(Color.parseColor("#027989"));
-//                pastButton.setTextColor(Color.WHITE);
-//
-//                upcomingButton.setTextColor(Color.parseColor("#027989"));
-//                upcomingButton.setBackgroundColor(Color.parseColor("#DFDFDF"));
-//
-//                otherButton.setTextColor(Color.parseColor("#027989"));
-//                otherButton.setBackgroundColor(Color.parseColor("#DFDFDF"));
-//
-//            }
-//        });
-//
-//        otherButton.setOnClickListener(new View.OnClickListener() {
-//
-//            @Override
-//            public void onClick(View view) {
-//                otherButton.setBackgroundColor(Color.parseColor("#027989"));
-//                otherButton.setTextColor(Color.WHITE);
-//
-//                upcomingButton.setTextColor(Color.parseColor("#027989"));
-//                upcomingButton.setBackgroundColor(Color.parseColor("#DFDFDF"));
-//
-//                pastButton.setTextColor(Color.parseColor("#027989"));
-//                pastButton.setBackgroundColor(Color.parseColor("#DFDFDF"));
-//            }
-//        });
-//
-//        upcomingButton.setOnClickListener(new View.OnClickListener() {
-//
-//            @Override
-//            public void onClick(View view) {
-//                upcomingButton.setBackgroundColor(Color.parseColor("#027989"));
-//                upcomingButton.setTextColor(Color.WHITE);
-//
-//                pastButton.setTextColor(Color.parseColor("#027989"));
-//                pastButton.setBackgroundColor(Color.parseColor("#DFDFDF"));
-//
-//                otherButton.setTextColor(Color.parseColor("#027989"));
-//                otherButton.setBackgroundColor(Color.parseColor("#DFDFDF"));
-//            }
-//        });
+        pastButton = findViewById(R.id.pastButton);
+        otherButton = findViewById(R.id.otherButton);
+        upcomingButton = findViewById(R.id.upcomingButton);
+
+        pastButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                pastButton.setBackgroundColor(Color.parseColor("#027989"));
+                pastButton.setTextColor(Color.WHITE);
+
+                upcomingButton.setTextColor(Color.parseColor("#027989"));
+                upcomingButton.setBackgroundColor(Color.parseColor("#DFDFDF"));
+
+                otherButton.setTextColor(Color.parseColor("#027989"));
+                otherButton.setBackgroundColor(Color.parseColor("#DFDFDF"));
+
+            }
+        });
+
+        otherButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                otherButton.setBackgroundColor(Color.parseColor("#027989"));
+                otherButton.setTextColor(Color.WHITE);
+
+                upcomingButton.setTextColor(Color.parseColor("#027989"));
+                upcomingButton.setBackgroundColor(Color.parseColor("#DFDFDF"));
+
+                pastButton.setTextColor(Color.parseColor("#027989"));
+                pastButton.setBackgroundColor(Color.parseColor("#DFDFDF"));
+            }
+        });
+
+        upcomingButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                upcomingButton.setBackgroundColor(Color.parseColor("#027989"));
+                upcomingButton.setTextColor(Color.WHITE);
+
+                pastButton.setTextColor(Color.parseColor("#027989"));
+                pastButton.setBackgroundColor(Color.parseColor("#DFDFDF"));
+
+                otherButton.setTextColor(Color.parseColor("#027989"));
+                otherButton.setBackgroundColor(Color.parseColor("#DFDFDF"));
+            }
+        });
     }
 }
