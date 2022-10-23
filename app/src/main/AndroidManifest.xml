@@ -20,7 +20,7 @@
             android:name=".RandIActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Appointment_page_activity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
