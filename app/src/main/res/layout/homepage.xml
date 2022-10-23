@@ -50,7 +50,7 @@
         android:layout_alignTop="@+id/bt_2"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
-        android:text="using your FollowMyHealth® account"
+        android:text="using your MindYaWellness account"
         android:textColor="#686868"
         android:textSize="12sp" />
 
