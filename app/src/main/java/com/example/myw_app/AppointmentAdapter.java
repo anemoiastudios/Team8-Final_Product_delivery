@@ -1,6 +1,5 @@
 package com.example.myw_app;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,7 +21,7 @@ public class AppointmentAdapter extends RecyclerView.Adapter<AppointmentAdapter.
     @NonNull
     @Override
     public AppointmentAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.appointment_page, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.appointment_page_template, parent, false);
         return new ViewHolder(view);
     }
 
