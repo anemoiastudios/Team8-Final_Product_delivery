@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "144484679839",
+    "project_id": "mindyawellnessdraft6",
+    "storage_bucket": "mindyawellnessdraft6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:144484679839:android:e5802afd79d9db7d4ce2aa",
+        "android_client_info": {
+          "package_name": "com.example.mindyawellnessdraft6"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "144484679839-l8n3n9qeck5104568lv73qscu2ajf5tc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7FFty_a8IkpzARR7c-RxAJZZdBqtCeso"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "144484679839-l8n3n9qeck5104568lv73qscu2ajf5tc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

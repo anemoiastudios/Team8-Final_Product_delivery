@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CustomerMoreEntriesActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/customerMoreEntryAppBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/customerMoreEntryMaterialToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="More Entry"
+            app:titleCentered="true"
+            app:titleTextColor="@color/white"
+            app:navigationIcon="@drawable/ic_baseline_arrow_back_ios_24"
+            />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/customerMoreEntryAppBarLayout"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="15dp"
+            >
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/customerMoreEntryTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="Housing"
+                android:textSize="25sp"
+                />
+            <!-- android:text="More Entry Title" -->
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/customerMoreEntryDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="@string/more_description_sample_text"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+
+                android:layout_below="@+id/customerMoreEntryTitle"
+                />
+            <!-- android:text="More Entry Description" -->
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/customerMoreEntryAdditional"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="Additional Links"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+
+                android:layout_below="@+id/customerMoreEntryDescription"
+                />
+
+
+
+        </RelativeLayout>
+
+
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

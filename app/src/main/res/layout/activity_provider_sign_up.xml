@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProviderSignUpActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Provider Sign Up"
+            app:titleCentered="true"
+            app:titleTextColor="@color/white"
+            />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        >
+
+        <TextView
+            android:id="@+id/providerSignUpTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Sign Up as Provider"
+            android:textSize="20dp"
+            android:textStyle="bold"
+
+            android:layout_centerHorizontal="true"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/emailProviderSignUpTextInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/providerSignUpTextView"
+            android:layout_marginTop="10dp"
+            android:hint="Email"
+
+
+            android:paddingHorizontal="65dp"
+            app:startIconDrawable="@drawable/ic_baseline_email_24">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/emailProviderSignUpEditText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fullNameProviderSignUpTextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@+id/emailProviderSignUpTextInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:hint="Full Name"
+            app:startIconDrawable="@drawable/ic_baseline_person_24"
+
+            android:layout_marginTop="10dp"
+            android:paddingHorizontal="65dp"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/fullNameProviderSignUpEditText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordProviderSignUpTextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@+id/fullNameProviderSignUpTextInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:hint="Password"
+            app:startIconDrawable="@drawable/ic_baseline_password_24"
+            app:endIconMode="password_toggle"
+
+            android:layout_marginTop="10dp"
+            android:paddingHorizontal="65dp"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passwordProviderSignUpEditText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:inputType="textPassword"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/reInputPasswordProviderSignUpTextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@+id/passwordProviderSignUpTextInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:hint="Confirm Password"
+            app:startIconDrawable="@drawable/ic_baseline_password_24"
+            app:endIconMode="password_toggle"
+
+            android:layout_marginTop="10dp"
+            android:paddingHorizontal="65dp"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/reInputPasswordProviderSignUpEditText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:inputType="textPassword"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/credentialsProviderSignUpTextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+            android:hint="Credentials"
+            app:startIconDrawable="@drawable/ic_baseline_school_24"
+
+            android:layout_marginHorizontal="65dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/reInputPasswordProviderSignUpTextInputLayout"
+
+            >
+
+            <AutoCompleteTextView
+                android:id="@+id/credentialsProviderSignUpAutoCompleteTextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="none"
+                />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/finishButton"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@+id/credentialsProviderSignUpTextInputLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:padding="8dp"
+
+            android:text="Sign Up"
+            android:textAllCaps="false"
+            android:textSize="20dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

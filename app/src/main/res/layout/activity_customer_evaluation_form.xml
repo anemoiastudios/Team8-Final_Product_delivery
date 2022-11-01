@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CustomerEvaluationFormActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/patientEvaluationAppBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Patient Evaluation"
+            app:titleCentered="true"
+            app:titleTextColor="@color/white"
+            />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/patientEvaluationAppBarLayout"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            >
+
+            <TextView
+                android:id="@+id/patientEvaluationTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="Fill this form out. It will only take 3 minutes."
+                android:textSize="20dp"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:textStyle="bold"
+
+                />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/firstNamePETextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:hint="First Name"
+
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/patientEvaluationTextView"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/firstNamePEEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/lastNamePETextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@id/firstNamePETextInputLayout"
+
+                android:hint="Last Name"
+                android:paddingTop="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/lastNamePEEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/agePETextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@id/lastNamePETextInputLayout"
+
+                android:hint="Age"
+                android:paddingTop="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/agePEEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/addressPETextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@id/agePETextInputLayout"
+
+                android:hint="Address"
+                android:paddingTop="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/addressPEEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/zipCodePETextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@id/addressPETextInputLayout"
+
+                android:hint="Zip Code"
+                android:paddingTop="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/zipCodePEEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/cityPETextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@id/zipCodePETextInputLayout"
+
+                android:hint="City"
+                android:paddingTop="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/cityPEEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/statePETextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@id/cityPETextInputLayout"
+
+                android:hint="State"
+                android:paddingTop="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/statePEEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/phoneNumberPETextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@id/statePETextInputLayout"
+
+                android:hint="Phone Number"
+                android:paddingTop="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/phoneNumberPEEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/genderPETextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@id/phoneNumberPETextInputLayout"
+                android:hint="Gender"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+
+                android:paddingTop="10dp">
+
+                <AutoCompleteTextView
+                    android:id="@+id/genderPEAutoCompleteTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="none"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/dateOfBirthPETextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:hint="Date of Birth (MM/DD/YYYY)"
+
+                android:layout_below="@id/genderPETextInputLayout"
+                android:paddingTop="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/dateOfBirthPEEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/heightPETextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:hint="Height (in centimeters)"
+
+                android:layout_below="@id/dateOfBirthPETextInputLayout"
+                android:paddingTop="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/heightPEEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/weightPETextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:hint="Weight (in kilograms)"
+
+                android:layout_below="@id/heightPETextInputLayout"
+                android:paddingTop="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/weightPEEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/BMIPETextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:hint="BMI"
+
+                android:layout_below="@id/weightPETextInputLayout"
+                android:paddingTop="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/BMIPEEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/bloodPressurePETextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:hint="Systolic (Upper) Blood Pressure"
+
+                android:layout_below="@id/BMIPETextInputLayout"
+                android:paddingTop="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/bloodPressurePETextInputLayoutPEEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/insuranceCompanyPETextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:hint="Insurance Company Name (no required)"
+
+                android:layout_below="@id/bloodPressurePETextInputLayout"
+                android:paddingTop="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/insuranceCompanyPETextInputLayoutPEEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/insuranceIDPETextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:hint="Insurance ID (no required)"
+
+                android:layout_below="@id/insuranceCompanyPETextInputLayout"
+                android:paddingTop="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/insuranceIDPETextInputLayoutPEEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/allergiesPETextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:hint="List your allergies"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+                android:layout_below="@id/insuranceIDPETextInputLayout"
+                android:paddingTop="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/allergiesPETextInputLayoutPEEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/conditionsPETextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:hint="List your medical conditions (diabetes, etc.)"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+                android:layout_below="@id/allergiesPETextInputLayout"
+                android:paddingTop="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/conditionsPETextInputLayoutPEEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/medicationsPETextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:hint="List your medications"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+                android:layout_below="@id/conditionsPETextInputLayout"
+                android:paddingTop="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/medicationsPETextInputLayoutPEEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/symptomsPETextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:hint="List your on going symptoms"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+                android:layout_below="@id/medicationsPETextInputLayout"
+                android:paddingTop="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/symptomsPETextInputLayoutPEEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/finishEvaluationFormButton"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+
+                android:text="Submit"
+                android:textSize="20dp"
+                android:padding="8dp"
+                android:textAllCaps="false"
+
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/symptomsPETextInputLayout"
+
+                />
+
+
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+</RelativeLayout>

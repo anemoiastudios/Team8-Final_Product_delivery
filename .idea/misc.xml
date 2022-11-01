@@ -3,57 +3,71 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Projects/CSI499/Mind-Ya-Wellness/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.4185" />
-        <entry key="..\:/Projects/CSI499/Mind-Ya-Wellness/app/src/main/res/drawable/continue_button.xml" value="0.315" />
-        <entry key="..\:/Projects/CSI499/Mind-Ya-Wellness/app/src/main/res/drawable/edit_profile_button.xml" value="0.4185" />
-        <entry key="..\:/Projects/CSI499/Mind-Ya-Wellness/app/src/main/res/drawable/enterbox.xml" value="0.4185" />
-        <entry key="..\:/Projects/CSI499/Mind-Ya-Wellness/app/src/main/res/drawable/forgot_button.xml" value="0.316" />
-        <entry key="..\:/Projects/CSI499/Mind-Ya-Wellness/app/src/main/res/drawable/forgot_password_button.xml" value="0.316" />
-        <entry key="..\:/Projects/CSI499/Mind-Ya-Wellness/app/src/main/res/drawable/guest_button.xml" value="0.3455" />
-        <entry key="..\:/Projects/CSI499/Mind-Ya-Wellness/app/src/main/res/drawable/ic_launcher_background.xml" value="0.4185" />
-        <entry key="..\:/Projects/CSI499/Mind-Ya-Wellness/app/src/main/res/drawable/login_button.xml" value="0.316" />
-        <entry key="..\:/Projects/CSI499/Mind-Ya-Wellness/app/src/main/res/font/outfit.xml" value="0.5828125" />
-        <entry key="..\:/Projects/CSI499/Mind-Ya-Wellness/app/src/main/res/layout-w1240dp/activity_login.xml" value="0.25" />
-        <entry key="..\:/Projects/CSI499/Mind-Ya-Wellness/app/src/main/res/layout/activity_login.xml" value="0.5" />
-        <entry key="..\:/Projects/CSI499/Mind-Ya-Wellness/app/src/main/res/layout/activity_main.xml" value="0.2692502532928065" />
-        <entry key="..\:/Projects/CSI499/Mind-Ya-Wellness/app/src/main/res/layout/appointment_details.xml" value="0.2692502532928065" />
-        <entry key="..\:/Projects/CSI499/Mind-Ya-Wellness/app/src/main/res/layout/edit_profile.xml" value="0.2692502532928065" />
-        <entry key="..\:/Projects/CSI499/Mind-Ya-Wellness/app/src/main/res/layout/homepage.xml" value="0.4542572463768116" />
-        <entry key="..\:/Users/Owner/AndroidStudioProjects/MYWApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.266" />
-        <entry key="..\:/Users/Owner/AndroidStudioProjects/MYWApp/app/src/main/res/drawable/cancel_appt_button.xml" value="0.325" />
-        <entry key="..\:/Users/Owner/AndroidStudioProjects/MYWApp/app/src/main/res/drawable/edit_profile_button.xml" value="0.265" />
-        <entry key="..\:/Users/Owner/AndroidStudioProjects/MYWApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.266" />
-        <entry key="..\:/Users/Owner/AndroidStudioProjects/MYWApp/app/src/main/res/layout/activity_main.xml" value="0.2609375" />
-        <entry key="..\:/Users/Owner/AndroidStudioProjects/MYWApp/app/src/main/res/layout/activity_profile_page.xml" value="0.35688405797101447" />
-        <entry key="..\:/Users/Owner/AndroidStudioProjects/MYWApp/app/src/main/res/layout/activity_rand_iactivity.xml" value="0.35688405797101447" />
-        <entry key="..\:/Users/Owner/AndroidStudioProjects/MYWApp/app/src/main/res/layout/appointment_detail.xml" value="0.35688405797101447" />
-        <entry key="..\:/Users/Owner/AndroidStudioProjects/MYWApp/app/src/main/res/layout/appointment_details.xml" value="0.33" />
-        <entry key="..\:/Users/Owner/AndroidStudioProjects/MYWApp/app/src/main/res/layout/edit_profile.xml" value="0.33" />
-        <entry key="..\:/Users/Owner/AndroidStudioProjects/MYWApp/app/src/main/res/layout/journal_item_view.xml" value="0.35688405797101447" />
-        <entry key="..\:/Users/Owner/AndroidStudioProjects/MYWApp/app/src/main/res/layout/login.xml" value="0.35688405797101447" />
-        <entry key="..\:/Users/Owner/AndroidStudioProjects/MYWApp/app/src/main/res/layout/my_appointments.xml" value="0.67" />
-        <entry key="..\:/Users/Owner/AndroidStudioProjects/MYWApp/app/src/main/res/layout/my_health_page.xml" value="0.25" />
-        <entry key="..\:/Users/Owner/AndroidStudioProjects/MYWApp/app/src/main/res/layout/myappointment.xml" value="0.35688405797101447" />
-        <entry key="..\:/Users/Owner/AndroidStudioProjects/MYWApp/app/src/main/res/layout/profilepage.xml" value="0.35688405797101447" />
-        <entry key="..\:/Users/Owner/AndroidStudioProjects/MYWApp/app/src/main/res/layout/randi_item.xml" value="0.35688405797101447" />
-        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1415" />
-        <entry key="app/src/main/res/drawable/enterbox.xml" value="0.1415" />
-        <entry key="app/src/main/res/drawable/forgot_button.xml" value="0.1415" />
-        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.15" />
-        <entry key="app/src/main/res/drawable/image_button_borders.xml" value="0.15" />
-        <entry key="app/src/main/res/drawable/login_button.xml" value="0.1415" />
-        <entry key="app/src/main/res/drawable/roundedcorners.xml" value="0.15" />
+        <entry key="../../../../../../layout/custom_preview.xml" value="0.10371702637889688" />
+        <entry key="..\:/Users/Owner/AndroidStudioProjects/mindyawellness/app/src/main/res/layout/activity_customer_update_notifications.xml" value="0.35507246376811596" />
+        <entry key="..\:/Users/Owner/AndroidStudioProjects/mindyawellness/app/src/main/res/layout/activity_login.xml" value="0.35507246376811596" />
+        <entry key="app/src/main/res/drawable/ic_baseline_more_horiz_24.xml" value="0.173" />
+        <entry key="app/src/main/res/layout/activity_customer_allergies.xml" value="0.25364583333333335" />
+        <entry key="app/src/main/res/layout/activity_customer_appointment.xml" value="0.23958333333333334" />
+        <entry key="app/src/main/res/layout/activity_customer_chat_with_provider.xml" value="0.26941086527650393" />
+        <entry key="app/src/main/res/layout/activity_customer_doctors_note.xml" value="0.25364583333333335" />
+        <entry key="app/src/main/res/layout/activity_customer_edit_private_information.xml" value="0.25364583333333335" />
+        <entry key="app/src/main/res/layout/activity_customer_evaluation_form.xml" value="0.25364583333333335" />
+        <entry key="app/src/main/res/layout/activity_customer_identification.xml" value="0.25364583333333335" />
+        <entry key="app/src/main/res/layout/activity_customer_instant_chatting.xml" value="0.25364583333333335" />
+        <entry key="app/src/main/res/layout/activity_customer_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_customer_medical_conditions.xml" value="0.25364583333333335" />
+        <entry key="app/src/main/res/layout/activity_customer_medications.xml" value="0.25364583333333335" />
+        <entry key="app/src/main/res/layout/activity_customer_more_entries.xml" value="0.23958333333333334" />
+        <entry key="app/src/main/res/layout/activity_customer_more_fragment.xml" value="0.25364583333333335" />
+        <entry key="app/src/main/res/layout/activity_customer_previous_medical_history.xml" value="0.25364583333333335" />
+        <entry key="app/src/main/res/layout/activity_customer_private_information.xml" value="0.25364583333333335" />
+        <entry key="app/src/main/res/layout/activity_customer_private_information_authentication.xml" value="0.25364583333333335" />
+        <entry key="app/src/main/res/layout/activity_customer_provider_profile.xml" value="0.25364583333333335" />
+        <entry key="app/src/main/res/layout/activity_customer_reset_password.xml" value="0.25364583333333335" />
+        <entry key="app/src/main/res/layout/activity_customer_set_appointment.xml" value="0.23958333333333334" />
+        <entry key="app/src/main/res/layout/activity_customer_settings.xml" value="0.25364583333333335" />
+        <entry key="app/src/main/res/layout/activity_customer_sign_up.xml" value="0.25364583333333335" />
+        <entry key="app/src/main/res/layout/activity_customer_symptoms.xml" value="0.25364583333333335" />
+        <entry key="app/src/main/res/layout/activity_customer_update_notifications.xml" value="0.25364583333333335" />
+        <entry key="app/src/main/res/layout/activity_customer_update_profile.xml" value="0.26407012939453123" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.25364583333333335" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25364583333333335" />
-        <entry key="app/src/main/res/layout/activity_profile_page.xml" value="0.2548419189453124" />
-        <entry key="app/src/main/res/layout/activity_rand_iactivity.xml" value="0.25364583333333335" />
-        <entry key="app/src/main/res/layout/appointment_detail.xml" value="0.25364583333333335" />
-        <entry key="app/src/main/res/layout/appointment_details.xml" value="0.25364583333333335" />
-        <entry key="app/src/main/res/layout/edit_profile.xml" value="0.25364583333333335" />
-        <entry key="app/src/main/res/layout/journal_item_view.xml" value="0.2526041666666667" />
-        <entry key="app/src/main/res/layout/login.xml" value="0.25364583333333335" />
-        <entry key="app/src/main/res/layout/myappointment.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/profilepage.xml" value="0.19610507246376813" />
-        <entry key="app/src/main/res/layout/randi_item.xml" value="0.2526041666666667" />
+        <entry key="app/src/main/res/layout/activity_provider_appointment.xml" value="0.25364583333333335" />
+        <entry key="app/src/main/res/layout/activity_provider_chat_with_customer.xml" value="0.25364583333333335" />
+        <entry key="app/src/main/res/layout/activity_provider_create_discussion.xml" value="0.23958333333333334" />
+        <entry key="app/src/main/res/layout/activity_provider_customer_profile.xml" value="0.23958333333333334" />
+        <entry key="app/src/main/res/layout/activity_provider_main.xml" value="0.25364583333333335" />
+        <entry key="app/src/main/res/layout/activity_provider_settings.xml" value="0.25364583333333335" />
+        <entry key="app/src/main/res/layout/activity_provider_sign_up.xml" value="0.25364583333333335" />
+        <entry key="app/src/main/res/layout/activity_recovery_account.xml" value="0.25364583333333335" />
+        <entry key="app/src/main/res/layout/activity_reset_password.xml" value="0.25364583333333335" />
+        <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.26316274007161455" />
+        <entry key="app/src/main/res/layout/activity_welcome.xml" value="0.25364583333333335" />
+        <entry key="app/src/main/res/layout/fragment_customer_appointments.xml" value="0.25364583333333335" />
+        <entry key="app/src/main/res/layout/fragment_customer_home.xml" value="0.24655052330700492" />
+        <entry key="app/src/main/res/layout/fragment_customer_more.xml" value="0.25364583333333335" />
+        <entry key="app/src/main/res/layout/fragment_customer_providers.xml" value="0.25364583333333335" />
+        <entry key="app/src/main/res/layout/fragment_more.xml" value="0.23958333333333334" />
+        <entry key="app/src/main/res/layout/fragment_provider_appointments.xml" value="0.23958333333333334" />
+        <entry key="app/src/main/res/layout/fragment_provider_customers.xml" value="0.23958333333333334" />
+        <entry key="app/src/main/res/layout/fragment_provider_home.xml" value="0.25364583333333335" />
+        <entry key="app/src/main/res/layout/list_credentials.xml" value="0.25364583333333335" />
+        <entry key="app/src/main/res/layout/list_customer_appointments_card.xml" value="0.2697255452473958" />
+        <entry key="app/src/main/res/layout/list_customer_more_card.xml" value="0.25364583333333335" />
+        <entry key="app/src/main/res/layout/list_customer_provider_profile_discussion.xml" value="0.2526041666666667" />
+        <entry key="app/src/main/res/layout/list_gender.xml" value="0.25364583333333335" />
+        <entry key="app/src/main/res/layout/list_provider_appointments_card.xml" value="0.2526041666666667" />
+        <entry key="app/src/main/res/layout/list_provider_card.xml" value="0.2903045654296877" />
+        <entry key="app/src/main/res/layout/list_provider_request_card.xml" value="0.2526041666666667" />
+        <entry key="app/src/main/res/menu/customer_bottom_navigation.xml" value="0.2526041666666667" />
+        <entry key="app/src/main/res/menu/customer_home_top_app_bar.xml" value="0.2383006554523497" />
+        <entry key="app/src/main/res/menu/customer_private_information_entries_top_app_bar.xml" value="0.2526041666666667" />
+        <entry key="app/src/main/res/menu/customer_private_information_top_app_bar.xml" value="0.25364583333333335" />
+        <entry key="app/src/main/res/menu/customer_settings_top_app_bar.xml" value="0.2526041666666667" />
+        <entry key="app/src/main/res/menu/provider_appointments_top_app_bar.xml" value="0.25364583333333335" />
+        <entry key="app/src/main/res/menu/provider_bottom_navigation.xml" value="0.25364583333333335" />
+        <entry key="app/src/main/res/menu/provider_home_top_app_bar.xml" value="0.2526041666666667" />
       </map>
     </option>
   </component>
@@ -62,12 +76,5 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
-  </component>
-  <component name="VisualizationToolProject">
-    <option name="state">
-      <ProjectState>
-        <option name="scale" value="0.25364583333333335" />
-      </ProjectState>
-    </option>
   </component>
 </project>

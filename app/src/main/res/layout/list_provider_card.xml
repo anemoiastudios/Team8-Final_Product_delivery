@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:id="@+id/providerCardListCardView"
+
+    android:layout_width="150dp"
+    android:layout_height="150dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="10dp"
+    android:layout_margin="10dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:layout_centerInParent="true"
+            >
+
+            <LinearLayout
+                android:id="@+id/providerCardStroke"
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+
+                android:layout_alignParentTop="true"
+
+                android:background="@color/purple_500"
+                android:orientation="horizontal" />
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@+id/providerCardStroke"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/providerCardProfilePictureCardView"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_centerHorizontal="true"
+                    app:cardCornerRadius="30dp"
+
+                    app:strokeColor="@color/purple_500"
+                    app:strokeWidth="5dp"
+
+
+                    >
+
+                    <ImageView
+                        android:id="@+id/providerCardImageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        />
+                    <!-- android:src="@mipmap/ic_launcher" -->
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:id="@+id/providerCardProviderName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/providerCardProfilePictureCardView"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:text="Provider Name"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/providerCardTherapistType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/providerCardProviderName"
+                    android:layout_centerHorizontal="true"
+                    android:text="Therapist Type" />
+
+
+            </RelativeLayout>
+
+
+
+
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

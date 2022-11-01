@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/providerCreateDiscussion"
+        android:title="Discussion Create"
+        android:icon="@drawable/ic_baseline_people_24"
+        app:showAsAction="ifRoom"
+        android:iconTint="@color/white"
+        />
+
+</menu>

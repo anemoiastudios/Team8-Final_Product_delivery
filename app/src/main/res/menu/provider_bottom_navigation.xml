@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/providerHome"
+        android:title="Home"
+        android:icon="@drawable/ic_baseline_home_24"
+        />
+
+    <item
+        android:id="@+id/providerCustomers"
+        android:title="Customers"
+        android:icon="@drawable/ic_baseline_group_24"
+        />
+
+    <item
+        android:id="@+id/providerAppointments"
+        android:title="Appointments"
+        android:icon="@drawable/ic_baseline_calendar_today_24"
+        />
+
+</menu>

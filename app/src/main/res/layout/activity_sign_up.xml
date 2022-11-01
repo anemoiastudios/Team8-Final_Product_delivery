@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpActivity">
+    
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Sign Up"
+            app:titleCentered="true"
+            app:titleTextColor="@color/white"
+            />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        >
+
+        <TextView
+            android:id="@+id/signUpTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Are you are customer or provider?"
+            android:textSize="20dp"
+            android:textStyle="bold"
+
+            android:layout_centerHorizontal="true"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/customerSignUpButton"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+
+            android:text="Customer"
+            android:textAllCaps="false"
+            android:textSize="20dp"
+            android:textColor="@color/dark_gray"
+            android:padding="8dp"
+
+            android:backgroundTint="@color/white"
+            app:strokeColor="@color/gray"
+            app:strokeWidth="2dp"
+
+            android:layout_below="@+id/signUpTextView"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/providerSignUpButton"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+
+            android:text="Provider"
+            android:textAllCaps="false"
+            android:textSize="20dp"
+            android:padding="8dp"
+
+            android:layout_below="@+id/customerSignUpButton"
+            android:layout_centerHorizontal="true"
+
+            />
+
+        <TextView
+            android:id="@+id/loginSignUpTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login in with existing account."
+
+            android:layout_below="@+id/providerSignUpButton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+
+
+            />
+
+
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
