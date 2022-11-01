@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CustomerHomeFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/customerHomeFragmentAppBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/customerHomeFragmentToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Home"
+            app:titleCentered="true"
+            app:titleTextColor="@color/white"
+            app:menu="@menu/customer_home_top_app_bar"
+            />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/customerHomeFragmentTopBlockRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+
+        android:layout_below="@+id/customerHomeFragmentAppBarLayout"
+
+        android:background="@color/dark_purple">
+
+        <RelativeLayout
+            android:id="@+id/customerHomeFragmentProfileHeaderRelativeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+
+            >
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/customerHomeFragmentProfileCardView"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                app:cardCornerRadius="30dp"
+                app:strokeColor="@color/purple_500"
+                app:strokeWidth="5dp">
+
+                <ImageView
+                    android:id="@+id/customerHomeFragmentProfileCardImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    />
+                <!-- android:src="@mipmap/ic_launcher_round" -->
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/customerHomeFragmentCustomerNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@+id/customerHomeFragmentProfileCardView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="Customer Name"
+
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@+id/customerHomeFragmentCustomerNameTextView"
+                android:layout_centerHorizontal="true"
+
+                >
+
+                <TextView
+                    android:id="@+id/customerHomeFragmentCustomerGenderTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Gender"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+
+                    />
+
+                <TextView
+                    android:id="@+id/customerHomeFragmentCustomerAgeTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="5dp"
+                    android:layout_toRightOf="@+id/customerHomeFragmentCustomerGenderTextView"
+                    android:text="Age"
+
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+
+                    />
+
+                <TextView
+                    android:id="@+id/customerHomeFragmentCustomerStatusTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="5dp"
+                    android:layout_toRightOf="@+id/customerHomeFragmentCustomerAgeTextView"
+                    android:text="Status"
+
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+
+                    />
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+
+        android:layout_centerHorizontal="true"
+        app:cardCornerRadius="0dp"
+
+        android:layout_below="@+id/customerHomeFragmentTopBlockRelativeLayout"
+        >
+
+        <ScrollView
+            android:id="@+id/customerHomeFragmentProfileScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:layout_centerInParent="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="20dp"
+                    android:paddingTop="10dp"
+
+                    >
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/customerHomeFragmentMoodCardView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_margin="10dp"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="8dp"
+
+                        app:cardElevation="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:id="@+id/customerHomeFragmentMoodLinearLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+
+                                android:background="@color/purple_700">
+
+                                <TextView
+                                    android:id="@+id/customerHomeFragmentMoodTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp"
+
+                                    android:text="Mood"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/white"
+                                    android:textSize="20dp"
+                                    android:textStyle="bold"
+
+                                    />
+
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:layout_below="@+id/customerHomeFragmentMoodLinearLayout"
+                                android:layout_margin="15dp"
+
+                                android:text="@string/profile_mood_sample_text"
+                                android:textColor="@color/black"
+                                android:textSize="20dp" />
+
+                        </RelativeLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/customerHomeFragmentBioCardView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_below="@+id/customerHomeFragmentMoodCardView"
+                        android:layout_margin="10dp"
+                        app:cardBackgroundColor="@color/white"
+
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="10dp"
+                        >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:id="@+id/customerHomeFragmentBioLinearLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+
+                                android:background="@color/purple_700">
+
+                                <TextView
+                                    android:id="@+id/customerHomeFragmentBioTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp"
+
+                                    android:text="Bio"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/white"
+                                    android:textSize="20dp"
+                                    android:textStyle="bold"
+
+                                    />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:layout_below="@+id/customerHomeFragmentBioLinearLayout"
+                                android:layout_margin="20dp"
+
+                                android:text="@string/profile_bio_sample_text"
+                                android:textColor="@color/black"
+                                android:textSize="20dp" />
+                        </RelativeLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/customerHomeFragmentLookingForCardView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_below="@+id/customerHomeFragmentBioCardView"
+                        android:layout_margin="10dp"
+                        app:cardBackgroundColor="@color/white"
+
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="10dp"
+                        >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:id="@+id/customerHomeFragmentLookingForLinearLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+
+                                android:background="@color/purple_700">
+
+                                <TextView
+                                    android:id="@+id/customerHomeFragmentLookingForTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp"
+
+                                    android:text="What I am looking for"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/white"
+                                    android:textSize="20dp"
+                                    android:textStyle="bold"
+
+                                    />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:layout_below="@+id/customerHomeFragmentLookingForLinearLayout"
+
+                                android:layout_marginStart="20dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginEnd="20dp"
+                                android:layout_marginBottom="20dp"
+                                android:text="@string/profile_looking_for_sample_text"
+                                android:textColor="@color/black"
+                                android:textSize="20dp" />
+                        </RelativeLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+
+        </ScrollView>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+    <!--
+        <Button
+        android:id="@+id/customerProfileLogoutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Logout"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/customerProfileTextView"
+        />
+    -->
+
+
+</RelativeLayout>

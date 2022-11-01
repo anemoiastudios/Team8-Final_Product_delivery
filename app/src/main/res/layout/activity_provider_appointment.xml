@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProviderAppointmentActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/providerAppointmentAppBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/providerAppointmentToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Appointments"
+            app:titleCentered="true"
+            app:titleTextColor="@color/white"
+            />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/providerAppointmentAppBarLayout"
+        android:padding="15dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/providerAppointmentTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Appointment Title"
+            android:textSize="25dp"
+            android:textColor="@color/black"
+
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/providerAppointmentDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@+id/providerAppointmentTitle"
+            android:text="Appointment Date"
+
+            android:textSize="20dp"
+            android:textColor="@color/black"
+
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/providerAppointmentCustomer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@+id/providerAppointmentDate"
+            android:text="Appointment Provider"
+
+            android:textSize="20dp"
+            android:textColor="@color/black"
+
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/providerAppointmentDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@+id/providerAppointmentCustomer"
+            android:text="@string/appointment_description_sample_text"
+
+            android:textSize="20dp"
+            android:layout_marginTop="5dp"
+
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+
+            android:text="Start Call"
+            android:textSize="20dp"
+            android:textAllCaps="false"
+            android:padding="8dp"
+            />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.myw_app">
+    package="com.example.mindyawellnessdraft6">
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -11,16 +13,112 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MYWApp"
+        android:theme="@style/Theme.MindYaWellnessDraft6"
         tools:targetApi="31">
         <activity
-            android:name=".ProfilePageActivity"
+            android:name=".ProviderChatWithCustomerActivity"
             android:exported="false" />
         <activity
-            android:name=".RandIActivity"
+            android:name=".ProviderCustomerProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".Appointment_page_activity"
+            android:name=".ProviderCreateDiscussionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProviderAppointmentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProviderSettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CustomerMoreEntriesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CustomerAppointmentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CustomerInstantChattingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CustomerChatWithProviderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CustomerSetAppointmentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CustomerProviderProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CustomerDoctorsNoteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CustomerPreviousMedicalHistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CustomerSymptomsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CustomerMedicationsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CustomerIdentificationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CustomerMedicalConditionsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CustomerAllergiesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CustomerEditPrivateInformationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CustomerPrivateInformationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CustomerPrivateInformationAuthenticationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CustomerResetPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CustomerUpdateNotificationsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CustomerUpdateProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CustomerSettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CustomerEvaluationFormActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProviderMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CustomerMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RecoveryAccountActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProviderSignUpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CustomerSignUpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WelcomeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

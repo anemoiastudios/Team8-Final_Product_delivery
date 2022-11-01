@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CustomerProviderProfileActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/customerProviderProfileAppBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/customerProviderProfileMaterialToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Customer Provider Profile"
+            app:titleCentered="true"
+            app:titleTextColor="@color/white"
+            app:navigationIcon="@drawable/ic_baseline_arrow_back_ios_24"
+            />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/customerProviderProfileTopBlockRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+
+        android:layout_below="@+id/customerProviderProfileAppBarLayout"
+
+        android:background="@color/dark_purple">
+
+        <RelativeLayout
+            android:id="@+id/customerProviderProfileHeaderRelativeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+
+            >
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/customerProviderProfileCardView"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                app:cardCornerRadius="30dp"
+                app:strokeColor="@color/purple_500"
+                app:strokeWidth="5dp">
+
+                <ImageView
+                    android:id="@+id/customerProviderProfileCardImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    />
+                <!-- android:src="@mipmap/ic_launcher_round" -->
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/customerProviderProfileProviderNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@+id/customerProviderProfileCardView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="Provider Name"
+
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@+id/customerProviderProfileProviderNameTextView"
+                android:layout_centerHorizontal="true"
+
+                >
+
+                <TextView
+                    android:id="@+id/customerProviderProfileProviderTypeTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Type"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+
+                    />
+
+                <TextView
+                    android:id="@+id/customerProviderProfileProviderStatusTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="5dp"
+                    android:layout_toRightOf="@+id/customerProviderProfileProviderTypeTextView"
+                    android:text="Status"
+
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+
+                    />
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/customerProviderProfileInteractionRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/customerProviderProfileTopBlockRelativeLayout"
+        android:background="@color/dark_purple"
+        android:layout_centerHorizontal="true"
+
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            >
+
+            <ImageButton
+                android:id="@+id/customerProviderProfileBookmarkImageButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@color/dark_purple"
+                android:src="@drawable/ic_baseline_bookmark_border_24"
+
+                />
+
+            <ImageButton
+                android:id="@+id/customerProviderProfileAppointmentImageButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_baseline_send_24"
+                android:background="@color/dark_purple"
+
+                android:layout_marginStart="80dp"
+                android:layout_toRightOf="@+id/customerProviderProfileBookmarkImageButton"
+                />
+
+            <ImageButton
+                android:id="@+id/customerProviderProfileMessageImageButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_baseline_message_24"
+                android:background="@color/dark_purple"
+
+                android:layout_marginStart="80dp"
+                android:layout_toRightOf="@+id/customerProviderProfileAppointmentImageButton"
+                />
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/customerProviderProfileInformationCardView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_centerHorizontal="true"
+        app:cardCornerRadius="0dp"
+
+        android:layout_below="@+id/customerProviderProfileInteractionRelativeLayout"
+        >
+
+        <ScrollView
+            android:id="@+id/customerProviderProfileScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:layout_centerInParent="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="15dp"
+                >
+
+                <TextView
+                    android:id="@+id/customerProviderProfileDiscussionTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Discussions"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/customerProviderProfileDiscussionsCardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+
+                    android:layout_below="@+id/customerProviderProfileDiscussionTextView"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        >
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/customerProviderProfileDiscussionsRecyclerView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                    </RelativeLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/customerProviderProfileMoodMaterialCardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_below="@+id/customerProviderProfileDiscussionsCardView"
+                    android:layout_margin="10dp"
+                    app:cardBackgroundColor="@color/white"
+
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="10dp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/customerProviderProfileMoodMaterialLinearLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+
+                            android:background="@color/purple_700">
+
+                            <TextView
+                                android:id="@+id/customerProviderProfileMoodMaterialTextView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+
+                                android:text="Mood"
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="20dp"
+                                android:textStyle="bold"
+
+                                />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_below="@+id/customerProviderProfileMoodMaterialLinearLayout"
+                            android:layout_margin="20dp"
+
+                            android:text="@string/profile_mood_sample_text"
+                            android:textColor="@color/black"
+                            android:textSize="20dp" />
+                    </RelativeLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/customerProviderProfileBioCardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_below="@+id/customerProviderProfileMoodMaterialCardView"
+                    android:layout_margin="10dp"
+                    app:cardBackgroundColor="@color/white"
+
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="10dp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/customerProviderProfileBioLinearLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+
+                            android:background="@color/purple_700">
+
+                            <TextView
+                                android:id="@+id/customerProviderProfileBioTextView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+
+                                android:text="Bio"
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="20dp"
+                                android:textStyle="bold"
+
+                                />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_below="@+id/customerProviderProfileBioLinearLayout"
+                            android:layout_margin="20dp"
+
+                            android:text="@string/profile_bio_sample_text"
+                            android:textColor="@color/black"
+                            android:textSize="20dp" />
+                    </RelativeLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+
+
+            </RelativeLayout>
+        </ScrollView>
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+</RelativeLayout>

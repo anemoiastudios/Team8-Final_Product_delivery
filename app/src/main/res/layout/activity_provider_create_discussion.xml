@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProviderCreateDiscussionActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/providerCreateDiscussionAppBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/providerCreateDiscussionToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Create Discussion"
+            app:titleCentered="true"
+            app:titleTextColor="@color/white"
+            app:navigationIcon="@drawable/ic_baseline_arrow_back_ios_24"
+            />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/providerCreateDiscussionAppBarLayout"
+
+        android:padding="15dp"
+        >
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/providerCreateDiscussionTitleInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:hint="Discussion Title"
+            android:layout_marginTop="10dp"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/providerCreateDiscussionTitleEditText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/providerCreateDiscussionDateInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:hint="Discussion Date"
+            android:layout_marginTop="10dp"
+
+            android:layout_below="@+id/providerCreateDiscussionTitleInputLayout"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/providerCreateDiscussionDateEditText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="datetime"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/providerCreateDiscussionDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:hint="Discussion Description"
+            android:layout_marginTop="10dp"
+
+            android:layout_below="@+id/providerCreateDiscussionDateInputLayout"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/emailCustomerSignUpEditText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="datetime"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/providerCreateDiscussionButton"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+
+            android:text="Create discussion"
+            android:textAllCaps="false"
+            android:textSize="20dp"
+            android:padding="8dp"
+
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/providerCreateDiscussionDate"
+
+            />
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

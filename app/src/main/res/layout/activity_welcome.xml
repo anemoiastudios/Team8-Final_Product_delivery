@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WelcomeActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Mind Ya Wellness®"
+            app:titleCentered="true"
+            app:titleTextColor="@color/white"
+            />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!--
+    <androidx.cardview.widget.CardView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:elevation="12dp"
+        android:id="@+id/view2"
+        app:cardCornerRadius="0dp"
+        android:layout_centerHorizontal="true"
+        android:innerRadius="0dp"
+        android:shape="ring"
+        android:thicknessRatio="1.9"
+
+        android:layout_above="@+id/welcomeButtonsRelativeLayout"
+        android:layout_marginBottom="50dp"
+        >
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@mipmap/mywlogo"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            >
+        </ImageView>
+
+    </androidx.cardview.widget.CardView>
+
+    -->
+
+    <RelativeLayout
+        android:id="@+id/welcomeButtonsRelativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        >
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/loginButton"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+
+            android:backgroundTint="@color/white"
+            android:padding="8dp"
+            android:text="@string/welcome_sign_up"
+            android:textAlignment="center"
+
+            android:textAllCaps="false"
+            android:textColor="@color/dark_gray"
+            app:strokeColor="@color/gray"
+            app:strokeWidth="2dp"
+
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/signUpButton"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@+id/loginButton"
+            android:layout_centerHorizontal="true"
+            android:padding="8dp"
+            android:text="Sign Up"
+            android:textAlignment="center"
+
+            android:textAllCaps="false"
+
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/welcome_bottom_text"
+        android:textAlignment="center"
+        android:padding="10dp"
+
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+
+        />
+
+
+</RelativeLayout>

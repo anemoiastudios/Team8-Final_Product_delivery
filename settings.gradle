@@ -5,6 +5,12 @@ pluginManagement {
         mavenCentral()
     }
 }
-
-rootProject.name = "MYW-App"
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "MindYaWellnessDraft6"
 include ':app'

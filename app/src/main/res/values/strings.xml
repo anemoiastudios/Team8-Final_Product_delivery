@@ -1,8 +1,97 @@
 <resources>
-    <string name="app_name">MYW-App</string>
-    <string name="resources_and_information">Resources and Information</string>
-    <string name="r_and_i_title">R and I Title</string>
-    <string name="r_and_i_description">R and I Description</string>
-    <string name="display_name">[display_Name]</string>
-    <string name="age">[age]</string>
+    <string name="app_name">MindYaWellnessDraft6</string>
+    <string name="welcome_activity">Welcome Activity</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome_sign_up"><font size="25"><b>Login</b></font>\n\<font size="15"><i>using your email</i></font></string>
+    <string name="welcome_bottom_text">Mind Ya Wellness® \n © 2022 Anemoia Studios \n Version 1.10</string>
+    <string name="profile_mood_sample_text">This is my mood. I am so happy right now because I get to see you today. uwu.</string>
+    <string name="profile_bio_sample_text">This is my bio. This is sample for bio. Who I am and what I want to say about myself
+    goes here. I really want to be talk about my feelings here in my bio because this is my bio and my feelings are really
+    important. Yayayayayayayay feelings.</string>
+    <string name="profile_looking_for_sample_text">This is where I want to talk about what I am looking for in a
+    therapist or a person who can help me with my mental problems. I need help with something and I hope that they
+    are qualified enough to help me uwu. </string>
+    <string name="appointment_description_sample_text">This is where I want to talk about what I am looking for in a
+    therapist or a person who can help me with my mental problems. I need help with something and I hope that they
+    are qualified enough to help me uwu. </string>
+    <string name="more_description_sample_text">Description about housing.Yay. Housing costs and stuff budgeting and and
+    anything that relates to it. asd sad asjdioajs da dijasod iasjod asiodjaosdasd asdjas iodjasoid jaiodj saio
+    iaodj aisodjao diajsdo aisjdoiasjdoi asjoiasjf aosidja odasjdi oajd ioasjd ajd oasijdoa
+    asidjaoisdjoiasjdoia sjdoaijdoij </string>
+
+
+    <string name="scrolltext">Kotlin is a statically typed,
+                 general-purpose programming language developed
+                 by JetBrains, that has built world-class IDEs
+                 like IntelliJ IDEA, PhpStorm, Appcode, etc.
+                 It was first introduced by JetBrains in 2011
+                 and a new language for the JVM. Kotlin is
+                 object-oriented language, and a “better language”
+                 than Java, but still be fully interoperable
+                 with Java code. Kotlin is sponsored by Google,
+                 announced as one of the official languages for
+                 Android Development in 2017.
+                 Advantages of Kotlin language:
+                 Easy to learn – Basic is almost similar to java.
+                 If anybody worked in java then easily understand
+                 in no time. Kotlin is multi-platform – Kotlin is
+                 supported by all IDEs of java so you can write
+                 your program and execute them on any machine
+                 which supports JVM. It’s much safer than Java.
+                 It allows using the Java frameworks and libraries
+                 in your new Kotlin projects by using advanced
+                 frameworks without any need to change the whole
+                 project in Java. Kotlin programming language,
+                 including the compiler, libraries and all the
+                 tooling is completely free and open source and
+                 available on github. Here is the link for
+                 Github https://github.com/JetBrains/kotlin
+                 Applications of Kotlin language:
+                 You can use Kotlin to build Android Application.
+                 Kotlin can also compile to JavaScript, and making
+                 it available for the frontend. It is also designed
+                 to work well for web development and server-side
+                 development.Kotlin is a statically typed, general-purpose
+                 programming language developed by JetBrains that
+                 has built world-class IDEs like IntelliJ IDEA,
+                 PhpStorm, Appcode, etc. It was first introduced
+                 by JetBrains in 2011.Kotlin is object-oriented
+                 language and a better language than Java, but still
+                 be fully interoperable with Java code. A constructor
+                 is a special member function that is invoked when
+                 an object of the class is created primarily to initialize
+                 variables or properties. A class needs to have a constructor
+                 and if we do not declare a constructor, then the compiler
+                 generates a default constructor.
+                 Kotlin has two types of constructors –
+                 Primary Constructor
+                 Secondary Constructor
+                 A class in Kotlin can have at most one primary
+                 constructor, and one or more secondary constructors.
+                 The primary constructor
+                 initializes the class, while the secondary
+                 constructor is used
+                 to initialize the class and introduce some extra logic.
+                 Explanation:
+                 When we create the object add for the class then
+                 the values 5 and 6
+                 passes to the constructor. The constructor
+                 parameters a and b
+                 initialize with the parameters 5 and 6 respectively.
+                 The local variable c contains the sum of variables.
+                 In the main, we access the property of
+                 constructor using ${add.c}.
+                 Explanation:
+                 Here, we have initialized the constructor
+                 parameters with some
+                 default values emp_id = 100 and emp_name = “abc”.
+                 When the object emp is created we passed the values for
+                 both the parameters so it prints those values.
+                 But, at the time of object emp2 creation,
+                 we have not passed
+                 the emp_name so initializer block uses
+                 the default values and
+                 print to the standard output.</string>
+
+
 </resources>
