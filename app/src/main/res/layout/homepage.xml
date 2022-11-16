@@ -22,7 +22,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="270dp"
         android:backgroundTint="#027989"
-        android:drawableLeft="@drawable/keypad"
+        android:drawableLeft="@drawable/ic_homepage_keypad"
         android:text="Sign In using Passcode"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
@@ -35,9 +35,8 @@
         android:layout_below="@+id/bt_1"
         android:layout_alignStart="@+id/bt_1"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="9dp"
         android:background="@drawable/stroke"
-        android:fontFamily="@font/outfit_bold"
         android:text="Sign In\n"
         android:textAllCaps="false"
         android:textColor="#4A4A4A"
@@ -76,7 +75,6 @@
         android:layout_marginStart="54dp"
         android:layout_marginBottom="90dp"
         android:background="@drawable/stroke2"
-        android:fontFamily="@font/outfit_light"
         android:text="Sign Up"
         android:textAllCaps="false"
         android:textColor="#027989" />
@@ -90,10 +88,9 @@
         android:layout_marginEnd="54dp"
         android:layout_marginBottom="90dp"
         android:background="@drawable/stroke2"
-        android:fontFamily="@font/outfit_light"
         android:text="Support"
         android:textAllCaps="false"
-        android:textColor="#027989"/>
+        android:textColor="#027989" />
 
     <TextView
         android:id="@+id/tv_2"
