@@ -12,6 +12,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.firebase.auth.FirebaseAuth;
@@ -20,7 +22,9 @@ public class CustomerHomeFragment extends Fragment {
 
     // private Button customerProfileLogoutButton;
     private MaterialToolbar customerHomeFragmentToolbar;
-
+    private TextView customerHomeMood;
+    private TextView customerHomeBio;
+    private TextView customerHomeLookingFor;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -29,6 +33,14 @@ public class CustomerHomeFragment extends Fragment {
         // setHasOptionsMenu(true);
 
         customerHomeFragmentToolbar = view.findViewById(R.id.customerHomeFragmentToolbar);
+
+        customerHomeMood = view.findViewById(R.id.customerHomeMood);
+        customerHomeBio = view.findViewById(R.id.customerHomeBio);
+        customerHomeLookingFor = view.findViewById(R.id.customerHomeLookingFor);
+
+        customerHomeMood.setText(CustomerUpdateProfileActivity.mood);
+        customerHomeBio.setText(CustomerUpdateProfileActivity.bio);
+        customerHomeLookingFor.setText(CustomerUpdateProfileActivity.lookingFor);
 
         customerHomeFragmentToolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
             @Override

@@ -196,13 +196,16 @@
                             </LinearLayout>
 
                             <TextView
+                                android:id="@+id/customerHomeMood"
                                 android:layout_width="match_parent"
+
                                 android:layout_height="wrap_content"
 
                                 android:layout_below="@+id/customerHomeFragmentMoodLinearLayout"
-                                android:layout_margin="15dp"
-
-                                android:text="@string/profile_mood_sample_text"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginEnd="15dp"
+                                android:layout_marginBottom="15dp"
                                 android:textColor="@color/black"
                                 android:textSize="20dp" />
 
@@ -250,13 +253,16 @@
                             </LinearLayout>
 
                             <TextView
+                                android:id="@+id/customerHomeBio"
                                 android:layout_width="match_parent"
+
                                 android:layout_height="wrap_content"
 
                                 android:layout_below="@+id/customerHomeFragmentBioLinearLayout"
-                                android:layout_margin="20dp"
-
-                                android:text="@string/profile_bio_sample_text"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginEnd="20dp"
+                                android:layout_marginBottom="20dp"
                                 android:textColor="@color/black"
                                 android:textSize="20dp" />
                         </RelativeLayout>
@@ -303,16 +309,16 @@
                             </LinearLayout>
 
                             <TextView
+                                android:id="@+id/customerHomeLookingFor"
                                 android:layout_width="match_parent"
+
                                 android:layout_height="wrap_content"
 
                                 android:layout_below="@+id/customerHomeFragmentLookingForLinearLayout"
-
                                 android:layout_marginStart="20dp"
                                 android:layout_marginTop="20dp"
                                 android:layout_marginEnd="20dp"
                                 android:layout_marginBottom="20dp"
-                                android:text="@string/profile_looking_for_sample_text"
                                 android:textColor="@color/black"
                                 android:textSize="20dp" />
                         </RelativeLayout>
