@@ -242,7 +242,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentTop="true"
 
-                            android:background="@color/purple_700">
+                            android:background="#E6E6FA">
 
                             <TextView
                                 android:id="@+id/customerProviderProfileMoodMaterialTextView"
@@ -252,7 +252,7 @@
 
                                 android:text="Mood"
                                 android:textAlignment="center"
-                                android:textColor="@color/white"
+                                android:textColor="@color/black"
                                 android:textSize="20dp"
                                 android:textStyle="bold"
 
@@ -264,8 +264,11 @@
                             android:layout_height="wrap_content"
 
                             android:layout_below="@+id/customerProviderProfileMoodMaterialLinearLayout"
-                            android:layout_margin="20dp"
 
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginBottom="20dp"
                             android:text="@string/profile_mood_sample_text"
                             android:textColor="@color/black"
                             android:textSize="20dp" />
@@ -295,7 +298,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentTop="true"
 
-                            android:background="@color/purple_700">
+                            android:background="#E6E6FA">
 
                             <TextView
                                 android:id="@+id/customerProviderProfileBioTextView"
@@ -305,7 +308,7 @@
 
                                 android:text="Bio"
                                 android:textAlignment="center"
-                                android:textColor="@color/white"
+                                android:textColor="@color/black"
                                 android:textSize="20dp"
                                 android:textStyle="bold"
 

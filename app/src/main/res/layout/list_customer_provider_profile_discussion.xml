@@ -28,7 +28,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="15dp"
                 android:layout_alignParentTop="true"
-                android:background="@color/purple_500"
+                android:background="#E6E6FA"
                 android:orientation="horizontal"
 
                 />
