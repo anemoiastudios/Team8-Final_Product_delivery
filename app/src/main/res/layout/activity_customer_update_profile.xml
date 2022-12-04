@@ -36,6 +36,7 @@
 
             android:layout_centerInParent="true"
             >
+
             <RelativeLayout
                 android:id="@+id/customerEditProfilePictureRelativeLayout"
                 android:layout_width="match_parent"
@@ -49,11 +50,12 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     app:cardCornerRadius="30dp"
-                    app:strokeColor="@color/purple_500"
+                    app:strokeColor="#e6e6fa"
 
                     app:strokeWidth="5dp">
 
                     <ImageView
+                        android:id="@+id/customerProfilePictureImageView"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
 
@@ -129,7 +131,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
 
-                        />
+                        android:text="@string/profile_mood_sample_text" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -149,7 +151,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
 
-                        />
+                        android:text="@string/profile_bio_sample_text" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -169,7 +171,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
 
-                        />
+                        android:text="@string/profile_looking_for_sample_text" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.button.MaterialButton
@@ -185,11 +187,12 @@
                     android:text="Save"
                     android:textAllCaps="false"
                     android:textColor="@color/black"
-
                     android:textSize="20dp"
-                    app:backgroundTint="#E6E6FA "
+                    app:backgroundTint="#E6E6FA"
                     app:strokeColor="#E0AA3E"
-                    app:strokeWidth="0.5dp" />
+                    app:strokeWidth="0.5dp"
+
+                    />
             </RelativeLayout>
 
 

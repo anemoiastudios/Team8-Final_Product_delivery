@@ -64,10 +64,11 @@
                 android:layout_height="wrap_content"
 
                 android:layout_below="@+id/providerHomeFragmentProfileCardView"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="11dp"
                 android:text="Provider Name"
+                android:layout_centerInParent="true"
 
+                android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="20dp"
                 android:textStyle="bold" />
@@ -149,7 +150,7 @@
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/providerHomeFragmentDiscussionsCardView"
                     android:layout_width="match_parent"
-                    android:layout_height="180dp"
+                    android:layout_height="wrap_content"
 
                     android:layout_below="@+id/providerHomeFragmentDiscussionTextView"
                     >
@@ -163,7 +164,7 @@
                         <androidx.recyclerview.widget.RecyclerView
                             android:id="@+id/providerHomeFragmentDiscussionsRecyclerView"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent" />
+                            android:layout_height="wrap_content" />
 
                     </RelativeLayout>
                 </com.google.android.material.card.MaterialCardView>
@@ -191,7 +192,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentTop="true"
 
-                            android:background="#E6E6FA">
+                            android:background="#e6e6fa">
 
                             <TextView
                                 android:id="@+id/providerHomeFragmentMoodMaterialTextView"
@@ -209,12 +210,16 @@
                         </LinearLayout>
 
                         <TextView
+                            android:id="@+id/moodTextView"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
 
                             android:layout_below="@+id/providerHomeFragmentMoodMaterialLinearLayout"
-                            android:layout_margin="20dp"
 
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginBottom="20dp"
                             android:text="@string/profile_mood_sample_text"
                             android:textColor="@color/black"
                             android:textSize="20dp" />
@@ -244,7 +249,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentTop="true"
 
-                            android:background="#E6E6FA">
+                            android:background="#e6e6fa">
 
                             <TextView
                                 android:id="@+id/providerHomeFragmentBioTextView"
@@ -262,12 +267,16 @@
                         </LinearLayout>
 
                         <TextView
+                            android:id="@+id/bioTextView"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
 
                             android:layout_below="@+id/providerHomeFragmentLinearLayout"
-                            android:layout_margin="20dp"
 
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginBottom="20dp"
                             android:text="@string/profile_bio_sample_text"
                             android:textColor="@color/black"
                             android:textSize="20dp" />

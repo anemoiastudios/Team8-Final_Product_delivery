@@ -23,16 +23,9 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/providerRequestsRecyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_below="@+id/providerAppointmentsAppBarLayout"
-        />
-
-    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/providerAppointmentsRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/providerRequestsRecyclerView" />
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/providerAppointmentsAppBarLayout" />
 
 </RelativeLayout>

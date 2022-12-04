@@ -22,6 +22,13 @@
             />
     </com.google.android.material.appbar.AppBarLayout>
 
+    <ListView
+        android:id="@+id/listMessages"
+        android:layout_width="match_parent"
+        android:layout_height="541dp"
+        android:translationY="60dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp"></ListView>
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="60dp"
@@ -40,21 +47,25 @@
             >
 
             <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:hint="Message"
+                android:id="@+id/message"
+                android:layout_width="349dp"
+                android:layout_height="wrap_content"
 
-                />
+                android:hint="Message" />
 
-            <ImageButton
-                android:layout_width="60dp"
-                android:layout_height="match_parent"
-                android:layout_alignParentEnd="true"
-                android:background="@color/purple_500"
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="12dp"
+                android:clickable="true"
+                android:translationX="350dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/message"
+                app:srcCompat="@android:drawable/ic_menu_send" />
 
-                android:src="@drawable/ic_baseline_send_24"
-
-                />
         </RelativeLayout>
     </com.google.android.material.card.MaterialCardView>
 

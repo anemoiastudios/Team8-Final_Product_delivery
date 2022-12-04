@@ -71,8 +71,8 @@
                 android:id="@+id/providerRequestCheckImageButton"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
+                android:background="#e6e6fa"
                 android:src="@drawable/ic_baseline_check_24"
-                android:background="@color/purple_500"
 
                 />
 
@@ -81,7 +81,7 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/ic_baseline_do_not_disturb_24"
-                android:background="@color/purple_500"
+                android:background="#E6E6FA"
 
                 android:layout_toRightOf="@+id/providerRequestCheckImageButton"
                 android:layout_marginLeft="10dp"

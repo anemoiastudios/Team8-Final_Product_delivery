@@ -1,6 +1,9 @@
 package com.example.mindyawellnessdraft6;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,14 +36,20 @@ public class CustomerProviderProfileDiscussionListRecyclerViewAdapter extends Re
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         holder.customerProviderProfileDiscussionTitle.setText(discussions.get(position).getDiscussionTitle());
         holder.customerProviderProfileDiscussionDate.setText(discussions.get(position).getDiscussionDate());
 
         holder.customerProviderProfileDiscussionCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(context, "You joined this discussion", Toast.LENGTH_SHORT).show();
+                Bundle bundle = new Bundle();
+                bundle.putString("discussionId", discussions.get(position).getDiscussionId());
+
+                Intent intent = new Intent(context, DiscussionEntryActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                intent.putExtras(bundle);
+                context.startActivity(intent);
             }
         });
 

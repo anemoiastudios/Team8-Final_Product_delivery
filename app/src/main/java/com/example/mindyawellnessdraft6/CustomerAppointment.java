@@ -4,6 +4,14 @@ public class CustomerAppointment {
     private String appointmentTitle;
     private String appointmentDate;
     private String appointmentProvider;
+    private String appointmentProviderUid;
+
+    public CustomerAppointment(String appointmentTitle, String appointmentDate, String appointmentProvider, String appointmentProviderUid) {
+        this.appointmentTitle = appointmentTitle;
+        this.appointmentDate = appointmentDate;
+        this.appointmentProvider = appointmentProvider;
+        this.appointmentProviderUid = appointmentProviderUid;
+    }
 
     public CustomerAppointment(String appointmentTitle, String appointmentDate, String appointmentProvider) {
         this.appointmentTitle = appointmentTitle;
@@ -33,5 +41,13 @@ public class CustomerAppointment {
 
     public void setAppointmentProvider(String appointmentProvider) {
         this.appointmentProvider = appointmentProvider;
+    }
+
+    public String getAppointmentProviderUid() {
+        return appointmentProviderUid;
+    }
+
+    public void setAppointmentProviderUid(String appointmentProviderUid) {
+        this.appointmentProviderUid = appointmentProviderUid;
     }
 }

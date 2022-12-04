@@ -3,6 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
+        android:id="@+id/providerAcceptDeclineDiscussion"
+        android:title="Discussion Accept / Decline"
+        android:icon="@drawable/ic_baseline_person_24"
+        app:showAsAction="ifRoom"
+        android:iconTint="@color/white"
+        />
+
+    <item
         android:id="@+id/providerCreateDiscussion"
         android:title="Discussion Create"
         android:icon="@drawable/ic_baseline_people_24"

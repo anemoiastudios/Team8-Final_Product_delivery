@@ -48,13 +48,13 @@
             android:backgroundTint="@color/white"
             android:padding="8dp"
 
-            android:text="Customer"
+            android:text="Client"
             android:textAllCaps="false"
             android:textColor="@color/dark_gray"
 
             android:textSize="20dp"
-            app:strokeColor="@color/gray"
-            app:strokeWidth="2dp"
+            app:strokeColor="#E0AA3E"
+            app:strokeWidth=".5dp"
 
             />
 
@@ -70,11 +70,12 @@
 
             android:textAllCaps="false"
             android:textColor="@color/black"
-
             android:textSize="20dp"
-            app:backgroundTint="#E6E6FA "
-            app:strokeColor="#E0AA3E "
-            app:strokeWidth=".5dp" />
+            app:backgroundTint="#E6E6FA"
+            app:strokeColor="#E0AA3E"
+            app:strokeWidth="0.5dp"
+
+            />
 
         <TextView
             android:id="@+id/loginSignUpTextView"

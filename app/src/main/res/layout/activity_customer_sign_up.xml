@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
 
             android:layout_centerHorizontal="true"
-            android:text="Sign Up as Customer"
+            android:text="Sign Up as Client"
             android:textSize="20dp"
 
             android:textStyle="bold" />
@@ -119,11 +119,12 @@
             android:text="Continue"
             android:textAllCaps="false"
             android:textColor="@color/black"
-
             android:textSize="20dp"
             app:backgroundTint="#E6E6FA"
             app:strokeColor="#E0AA3E "
-            app:strokeWidth="0.5dp" />
+            app:strokeWidth="0.5dp"
+
+            />
 
 
 

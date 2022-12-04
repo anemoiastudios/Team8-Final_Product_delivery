@@ -21,10 +21,14 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.SignInMethodQueryResult;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 import java.security.Provider;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class ProviderSignUpActivity extends AppCompatActivity {
@@ -41,6 +45,7 @@ public class ProviderSignUpActivity extends AppCompatActivity {
 
     private FirebaseAuth auth;
     private DatabaseReference databaseReference;
+    // private StorageReference storageReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +68,7 @@ public class ProviderSignUpActivity extends AppCompatActivity {
 
         auth = FirebaseAuth.getInstance();
         databaseReference = FirebaseDatabase.getInstance().getReference();
+        // storageReference = FirebaseStorage.getInstance().getReference();
 
         finishButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,18 +89,48 @@ public class ProviderSignUpActivity extends AppCompatActivity {
                     auth.createUserWithEmailAndPassword(email, password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                         @Override
                         public void onSuccess(AuthResult authResult) {
-                            HashMap<String, Object> h = new HashMap<>();
+                            HashMap<String, Object> credentials = new HashMap<>();
 
-                            h.put("email", email);
-                            h.put("userType", "PROVIDER");
-                            h.put("uid", auth.getCurrentUser().getUid());
+                            credentials.put("email", email);
+                            credentials.put("password", password);
+                            credentials.put("userType", "PROVIDER");
+                            credentials.put("uid", auth.getCurrentUser().getUid());
 
                             // Add to the database of the current user.
 
+                            HashMap<String, Object> profileInfo = new HashMap<>();
+
+                            profileInfo.put("status", "");
+                            profileInfo.put("mood", "");
+                            profileInfo.put("bio", "");
+                            profileInfo.put("profileImageUri", "");
+
+                            HashMap<String, Object> privateInfo = new HashMap<>();
+
+                            privateInfo.put("fullName", fullName);
+                            privateInfo.put("credential", credential);
+
+
+                            // Appointments
+                            HashMap<String, Object> appointmentInfo = new HashMap<>();
+                            ProviderAppointment testAppointment = new ProviderAppointment("Welcome", "01/23/22", "Mind Ya Wellness", "0");
+
+                            appointmentInfo.put("0", testAppointment);
+
+                            // We may not need to have bookmarked customers because customer determines that and we can just
+                            // go into database and see which clients / customers has the provider bookmarked
 
                             // -----
 
-                            databaseReference.child("Users").child(auth.getCurrentUser().getUid()).setValue(h).addOnCompleteListener(new OnCompleteListener<Void>() {
+                            // storageReference.child("users").child(auth.getCurrentUser().getUid()).child(auth.getCurrentUser().getUid() + "pp.jpeg");
+
+                            databaseReference.child("users").child(auth.getCurrentUser().getUid()).child("credentials").setValue(credentials);
+
+                            databaseReference.child("users").child(auth.getCurrentUser().getUid()).child("profileInfo").setValue(profileInfo);
+
+                            databaseReference.child("users").child(auth.getCurrentUser().getUid()).child("appointmentInfo").setValue(appointmentInfo);
+
+                            databaseReference.child("users").child(auth.getCurrentUser().getUid()).child("privateInfo").setValue(privateInfo).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if(task.isSuccessful()){
@@ -106,6 +142,7 @@ public class ProviderSignUpActivity extends AppCompatActivity {
                                         finish(); // Remove this and see what happens
 
                                     }
+
                                 }
                             });
 
@@ -116,6 +153,96 @@ public class ProviderSignUpActivity extends AppCompatActivity {
                             Toast.makeText(ProviderSignUpActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     });
+
+                    /*
+                    FirebaseAuth.getInstance().fetchSignInMethodsForEmail(email).addOnCompleteListener(new OnCompleteListener<SignInMethodQueryResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<SignInMethodQueryResult> task) {
+                            try {
+                                boolean isNewUser = task.getResult().getSignInMethods().isEmpty();
+
+                                if(isNewUser){
+                                    auth.createUserWithEmailAndPassword(email, password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
+                                        @Override
+                                        public void onSuccess(AuthResult authResult) {
+                                            HashMap<String, Object> credentials = new HashMap<>();
+
+                                            credentials.put("email", email);
+                                            credentials.put("password", password);
+                                            credentials.put("userType", "PROVIDER");
+                                            credentials.put("uid", auth.getCurrentUser().getUid());
+
+                                            // Add to the database of the current user.
+
+                                            HashMap<String, Object> profileInfo = new HashMap<>();
+
+                                            profileInfo.put("status", "");
+                                            profileInfo.put("mood", "");
+                                            profileInfo.put("bio", "");
+                                            profileInfo.put("profileImageUri", "");
+
+                                            HashMap<String, Object> privateInfo = new HashMap<>();
+
+                                            privateInfo.put("fullName", fullName);
+                                            privateInfo.put("credential", credential);
+
+
+                                            // Appointments
+                                            HashMap<String, Object> appointmentInfo = new HashMap<>();
+                                            ProviderAppointment testAppointment = new ProviderAppointment("Welcome", "01/23/22", "Mind Ya Wellness", "0");
+
+                                            appointmentInfo.put("0", testAppointment);
+
+                                            // We may not need to have bookmarked customers because customer determines that and we can just
+                                            // go into database and see which clients / customers has the provider bookmarked
+
+                                            // -----
+
+                                            // storageReference.child("users").child(auth.getCurrentUser().getUid()).child(auth.getCurrentUser().getUid() + "pp.jpeg");
+
+                                            databaseReference.child("users").child(auth.getCurrentUser().getUid()).child("credentials").setValue(credentials);
+
+                                            databaseReference.child("users").child(auth.getCurrentUser().getUid()).child("profileInfo").setValue(profileInfo);
+
+                                            databaseReference.child("users").child(auth.getCurrentUser().getUid()).child("appointmentInfo").setValue(appointmentInfo);
+
+                                            databaseReference.child("users").child(auth.getCurrentUser().getUid()).child("privateInfo").setValue(privateInfo).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                @Override
+                                                public void onComplete(@NonNull Task<Void> task) {
+                                                    if(task.isSuccessful()){
+                                                        Toast.makeText(ProviderSignUpActivity.this, "Success provider sign up", Toast.LENGTH_SHORT).show();
+
+                                                        Intent intent = new Intent(ProviderSignUpActivity.this, ProviderMainActivity.class);
+                                                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                                        startActivity(intent);
+                                                        finish(); // Remove this and see what happens
+
+                                                    }
+
+                                                }
+                                            });
+
+                                        }
+                                    }).addOnFailureListener(new OnFailureListener() {
+                                        @Override
+                                        public void onFailure(@NonNull Exception e) {
+                                            Toast.makeText(ProviderSignUpActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                                        }
+                                    });
+
+                                } else {
+                                    Toast.makeText(ProviderSignUpActivity.this, "This email is already in use", Toast.LENGTH_SHORT).show();
+
+                                }
+
+                            } catch(Exception e){
+                                Toast.makeText(ProviderSignUpActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+
+                            }
+
+                        }
+                    });
+                     */
                 }
             }
         });

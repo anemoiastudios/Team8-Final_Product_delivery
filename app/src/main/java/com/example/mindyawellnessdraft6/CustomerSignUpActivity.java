@@ -16,8 +16,10 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.firebase.FirebaseError;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.SignInMethodQueryResult;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -41,8 +43,6 @@ public class CustomerSignUpActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customer_sign_up);
 
-        this.setTitle("Customer Sign Up");
-
         emailCustomerSignUpEditText = findViewById(R.id.emailCustomerSignUpEditText);
         passwordCustomerSignUpEditText = findViewById(R.id.passwordCustomerSignUpEditText);
         reInputPasswordCustomerSignUpEditText = findViewById(R.id.reInputPasswordCustomerSignUpEditText);
@@ -59,66 +59,88 @@ public class CustomerSignUpActivity extends AppCompatActivity {
                 String password = passwordCustomerSignUpEditText.getText().toString();
                 String rePassword = reInputPasswordCustomerSignUpEditText.getText().toString();
 
-                if(email.length() == 0 || password.length() < 5 || rePassword.length() < 5){
-                    Toast.makeText(CustomerSignUpActivity.this, "Have information inputted", Toast.LENGTH_SHORT).show();
+                FirebaseAuth.getInstance().fetchSignInMethodsForEmail(email).addOnCompleteListener(new OnCompleteListener<SignInMethodQueryResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<SignInMethodQueryResult> task) {
+                        try {
+                            boolean isNewUser = task.getResult().getSignInMethods().isEmpty();
 
-                } else if(!password.equals(rePassword)){
-                    Toast.makeText(CustomerSignUpActivity.this, "Passwords are not the same", Toast.LENGTH_SHORT).show();
+                            if(isNewUser){
+                                if(email.length() == 0 || password.length() < 5 || rePassword.length() < 5){
+                                    Toast.makeText(CustomerSignUpActivity.this, "Have information inputted", Toast.LENGTH_SHORT).show();
 
-                } else {
-                    Intent intent = new Intent(CustomerSignUpActivity.this, CustomerEvaluationFormActivity.class);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                } else if(!password.equals(rePassword)){
+                                    Toast.makeText(CustomerSignUpActivity.this, "Passwords are not the same", Toast.LENGTH_SHORT).show();
 
-                    Bundle bundle = new Bundle();
-                    bundle.putString("email", email);
-                    bundle.putString("password", password);
+                                } else {
+                                    Intent intent = new Intent(CustomerSignUpActivity.this, CustomerEvaluationFormActivity.class);
+                                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
 
-                    intent.putExtras(bundle);
+                                    Bundle bundle = new Bundle();
+                                    bundle.putString("email", email);
+                                    bundle.putString("password", password);
 
-                    startActivity(intent);
-                    finish();
+                                    intent.putExtras(bundle);
 
-                    /*
-                    auth.createUserWithEmailAndPassword(email, password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
-                        @Override
-                        public void onSuccess(AuthResult authResult) {
-                            HashMap<String, Object> h = new HashMap<>();
+                                    startActivity(intent);
+                                    finish();
 
-                            h.put("email", email);
-                            h.put("userType", "CUSTOMER");
-                            h.put("uid", auth.getCurrentUser().getUid());
+                                /*
+                                auth.createUserWithEmailAndPassword(email, password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
+                                    @Override
+                                    public void onSuccess(AuthResult authResult) {
+                                        HashMap<String, Object> h = new HashMap<>();
 
-                            databaseReference.child("Users").child(auth.getCurrentUser().getUid()).setValue(h).addOnCompleteListener(new OnCompleteListener<Void>() {
-                                @Override
-                                public void onComplete(@NonNull Task<Void> task) {
-                                    if(task.isSuccessful()){
-                                        Toast.makeText(CustomerSignUpActivity.this, "Successful sign up", Toast.LENGTH_SHORT).show();
+                                        h.put("email", email);
+                                        h.put("userType", "CUSTOMER");
+                                        h.put("uid", auth.getCurrentUser().getUid());
 
-                                        Intent intent = new Intent(CustomerSignUpActivity.this, CustomerEvaluationFormActivity.class);
-                                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                                        startActivity(intent);
-                                        finish(); // Remove this and see what happens
+                                        databaseReference.child("Users").child(auth.getCurrentUser().getUid()).setValue(h).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                            @Override
+                                            public void onComplete(@NonNull Task<Void> task) {
+                                                if(task.isSuccessful()){
+                                                    Toast.makeText(CustomerSignUpActivity.this, "Successful sign up", Toast.LENGTH_SHORT).show();
+
+                                                    Intent intent = new Intent(CustomerSignUpActivity.this, CustomerEvaluationFormActivity.class);
+                                                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                                    startActivity(intent);
+                                                    finish(); // Remove this and see what happens
+                                                }
+                                            }
+                                        });
                                     }
+                                }).addOnFailureListener(new OnFailureListener() {
+                                    @Override
+                                    public void onFailure(@NonNull Exception e) {
+                                        Toast.makeText(CustomerSignUpActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                                    }
+                                });
+
+                                 */
                                 }
-                            });
-                        }
-                    }).addOnFailureListener(new OnFailureListener() {
-                        @Override
-                        public void onFailure(@NonNull Exception e) {
+
+
+                            /*
+                            Intent intent = new Intent(CustomerSignUpActivity.this, CustomerEvaluationFormActivity.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                            startActivity(intent);
+
+                             */
+
+                            } else {
+                                // To check if email is already in use
+                                Toast.makeText(CustomerSignUpActivity.this, "This email is already in use", Toast.LENGTH_SHORT).show();
+                            }
+
+                        } catch(Exception e){
+                            // To check if email is badly formatted
                             Toast.makeText(CustomerSignUpActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+
                         }
-                    });
 
-                     */
-                }
+                    }
+                });
 
-
-                /*
-                Intent intent = new Intent(CustomerSignUpActivity.this, CustomerEvaluationFormActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);
-
-                 */
             }
         });
 

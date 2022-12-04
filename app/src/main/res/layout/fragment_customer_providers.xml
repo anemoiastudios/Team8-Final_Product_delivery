@@ -37,11 +37,7 @@
             android:padding="8dp"
             android:text="24/7 Instant Chatting"
             android:textAllCaps="false"
-            android:textColor="@color/black"
-            android:textSize="20dp"
-            app:backgroundTint="#E6E6FA "
-            app:strokeColor="#E0AA3E "
-            app:strokeWidth="1dp" />
+            android:textSize="20dp" />
 
         <RelativeLayout
             android:id="@+id/customerProvidersBookmarkedRelativeLayout"
@@ -64,7 +60,7 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/customerProviderBookmarkedRecyclerView"
                 android:layout_width="match_parent"
-                android:layout_height="180dp"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/customerProviderBookmarkedTextView"
 
                 />

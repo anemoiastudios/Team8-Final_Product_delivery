@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProviderCustomerEditInformation">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/providerCustomerPrivateInformationAppBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/providerCustomerPrivateInformationToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            app:title="Client's Private Information"
+            app:titleCentered="true"
+            app:titleTextColor="@color/white"
+            app:navigationIcon="@drawable/ic_baseline_arrow_back_ios_24"
+            app:menu="@menu/customer_private_information_entries_top_app_bar"
+            />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_below="@+id/providerCustomerPrivateInformationAppBarLayout">
+
+        <RelativeLayout
+            android:id="@+id/providerCustomerInformationRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:padding="15dp"
+            >
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/customerEditFirstNameTextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="First name"
+
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/customerEditFirstNameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bobby"
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/customerEditLastNameTextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/customerEditFirstNameTextInputLayout"
+
+                android:layout_marginTop="10dp"
+                android:hint="Last Name"
+
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/customerEditLastNameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bob"
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/customerEditAgeTextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/customerEditLastNameTextInputLayout"
+
+                android:layout_marginTop="10dp"
+                android:hint="Age"
+
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/customerEditAgeEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="19"
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/customerEditAddressTextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/customerEditAgeTextInputLayout"
+
+                android:layout_marginTop="10dp"
+                android:hint="Address"
+
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/customerEditAddressEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Dog St"
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/customerEditZipCodeInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/customerEditAddressTextInputLayout"
+
+                android:layout_marginTop="10dp"
+                android:hint="Zip Code"
+
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/customerEditZipCodeEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="12205"
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/customerEditCityInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/customerEditZipCodeInputLayout"
+
+                android:layout_marginTop="10dp"
+                android:hint="City"
+
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/customerEditCityEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Albany"
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/customerEditStateInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/customerEditCityInputLayout"
+
+                android:layout_marginTop="10dp"
+                android:hint="State"
+
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/customerEditStateEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="NY"
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/customerEditPhoneNumberInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/customerEditStateInputLayout"
+
+                android:layout_marginTop="10dp"
+                android:hint="Phone Number"
+
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/customerEditPhoneNumberEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="12313213"
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/customerEditGenderInputLayout"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_below="@id/customerEditPhoneNumberInputLayout"
+                android:hint="Gender"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+
+                android:paddingTop="10dp">
+
+                <AutoCompleteTextView
+                    android:id="@+id/customerEditGenderAutoCompleteTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Male"
+                    android:inputType="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/customerEditDateOfBirthInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/customerEditGenderInputLayout"
+
+                android:layout_marginTop="10dp"
+                android:hint="Date of Birth (MM/DD/YYYY)"
+
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/customerEditDateOfBirthEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="01/01/1991"
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/customerEditHeightInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/customerEditDateOfBirthInputLayout"
+
+                android:layout_marginTop="10dp"
+                android:hint="Height (in centimeters)"
+
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/customerEditHeightEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="140"
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/customerEditWeightInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/customerEditHeightInputLayout"
+
+                android:layout_marginTop="10dp"
+                android:hint="Weight (in kilograms)"
+
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/customerEditWeightEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="21"
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/customerEditBMIInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/customerEditWeightInputLayout"
+
+                android:layout_marginTop="10dp"
+                android:hint="BMI"
+
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/customerEditBMIEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="120"
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/customerEditBloodPressureInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/customerEditBMIInputLayout"
+
+                android:layout_marginTop="10dp"
+                android:hint="Systolic (Upper) Blood Pressure"
+
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/customerEditBloodPressureEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="150"
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/customerEditInsuranceCompanyNameInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/customerEditBloodPressureInputLayout"
+
+                android:layout_marginTop="10dp"
+                android:hint="Insurance Company Name"
+
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/customerEditInsuranceCompanyNameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/customerEditInsuranceIDInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/customerEditInsuranceCompanyNameInputLayout"
+
+                android:layout_marginTop="10dp"
+                android:hint="Insurance ID"
+
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/customerEditInsuranceIDEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/customerEditAllergiesTextInputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/customerEditInsuranceIDInputLayout"
+
+                android:layout_height="wrap_content"
+                android:hint="List your allergies"
+
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/customerEditAllergiesEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/customerEditMedicalConditionsTextInputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/customerEditAllergiesTextInputLayout"
+
+                android:layout_height="wrap_content"
+                android:hint="List your medical conditions"
+
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/customerEditMedicalConditionsEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/customerEditMedicationsTextInputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/customerEditMedicalConditionsTextInputLayout"
+
+                android:layout_height="wrap_content"
+                android:hint="List your medications"
+
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/customerEditMedicationsEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/customerEditSymptomsTextInputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/customerEditMedicationsTextInputLayout"
+
+                android:layout_height="wrap_content"
+                android:hint="List your on-going symptoms"
+
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/customerEditSymptomsEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/customerEditPreviousMedicalHistoryTextInputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/customerEditSymptomsTextInputLayout"
+
+                android:layout_height="wrap_content"
+                android:hint="List your medical history"
+
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/customerEditMedicalHistoryEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/doctorsNotesTextInput"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/customerEditPreviousMedicalHistoryTextInputLayout"
+
+                android:layout_height="wrap_content"
+                android:hint="Doctor's Notes"
+
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/doctorsNotesTextInputEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

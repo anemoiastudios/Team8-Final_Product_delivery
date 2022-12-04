@@ -1,8 +1,9 @@
 package com.example.mindyawellnessdraft6;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
-import android.text.Layout;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,11 +13,17 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 import java.util.ArrayList;
 
 public class CustomerAppointmentsRecyclerViewAdapter extends RecyclerView.Adapter<CustomerAppointmentsRecyclerViewAdapter.ViewHolder>{
 
-    ArrayList<CustomerAppointment> customerAppointments = new ArrayList<>();
+    ArrayList<Appointment> customerAppointments = new ArrayList<>();
     private Context context;
 
     public CustomerAppointmentsRecyclerViewAdapter(Context context){
@@ -34,16 +41,37 @@ public class CustomerAppointmentsRecyclerViewAdapter extends RecyclerView.Adapte
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         holder.customerAppointmentTitleTextView.setText(customerAppointments.get(position).getAppointmentTitle());
         holder.customerAppointmentDateTextView.setText(customerAppointments.get(position).getAppointmentDate());
-        holder.customerAppointmentProviderTextView.setText(customerAppointments.get(position).getAppointmentProvider());
+
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("users").child(customerAppointments.get(position).getProviderUid());
+
+        databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                String providerName = snapshot.child("privateInfo").child("fullName").getValue().toString();
+                holder.customerAppointmentProviderTextView.setText(providerName);
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
 
         holder.customerAppointmentCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, CustomerAppointmentActivity.class);
+                // Have a Bundle here that passes in the appointmentId
+                Bundle bundle = new Bundle();
+                bundle.putString("appointmentId", customerAppointments.get(position).getAppointmentId());
+                Intent intent = new Intent(context, AppointmentEntryActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                intent.putExtras(bundle);
                 context.startActivity(intent);
             }
         });
@@ -55,7 +83,7 @@ public class CustomerAppointmentsRecyclerViewAdapter extends RecyclerView.Adapte
         return customerAppointments.size();
     }
 
-    public void setCustomerAppointments(ArrayList<CustomerAppointment> customerAppointments){
+    public void setCustomerAppointments(ArrayList<Appointment> customerAppointments){
         this.customerAppointments = customerAppointments;
 
     }

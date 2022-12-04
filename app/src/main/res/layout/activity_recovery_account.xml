@@ -73,11 +73,12 @@
             android:text="Recover Account"
             android:textAllCaps="false"
             android:textColor="@color/black"
-
             android:textSize="20dp"
-            app:backgroundTint="#E6E6FA "
-            app:strokeColor="#E0AA3E "
-            app:strokeWidth="0.5dp" />
+            app:backgroundTint="#E6E6FA"
+            app:strokeColor="#E0AA3E"
+            app:strokeWidth="0.5dp"
+
+            />
 
 
 

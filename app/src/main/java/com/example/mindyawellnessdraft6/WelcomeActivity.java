@@ -56,14 +56,24 @@ public class WelcomeActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
-        if(FirebaseAuth.getInstance().getCurrentUser() != null){
-            String userUID = FirebaseAuth.getInstance().getCurrentUser().getUid();
-            DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("Users").child(userUID);
+        /*
+        // If there is a problem, we need to sign out, so sign out and then comment this and uncomment inside of onDataChange
+        Intent intent = new Intent(WelcomeActivity.this, MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+        */
 
-            databaseReference.addValueEventListener(new ValueEventListener() {
+
+
+        if(FirebaseAuth.getInstance().getCurrentUser() != null){
+
+            String userUID = FirebaseAuth.getInstance().getCurrentUser().getUid();
+            DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("users").child(userUID);
+
+            databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
-                    String userType = snapshot.child("userType").getValue().toString();
+                    String userType = snapshot.child("credentials").child("userType").getValue().toString();
 
                     if(userType.equals("CUSTOMER")){
                         Intent intent = new Intent(WelcomeActivity.this, CustomerMainActivity.class);
@@ -86,6 +96,7 @@ public class WelcomeActivity extends AppCompatActivity {
 
         }
     }
+
 
     @Override
     public void onBackPressed() {

@@ -37,6 +37,7 @@ public class ProviderSettingsActivity extends AppCompatActivity {
         settingEntries.add("Update Profile");
         settingEntries.add("Update Notifications");
         settingEntries.add("Reset Password");
+        settingEntries.add("Private Information");
 
         ArrayAdapter settingsEntriesAdapter = new ArrayAdapter(ProviderSettingsActivity.this, android.R.layout.simple_list_item_1, settingEntries);
         providerSettingsListView.setAdapter(settingsEntriesAdapter);
@@ -49,12 +50,12 @@ public class ProviderSettingsActivity extends AppCompatActivity {
 
                 switch(entry){
                     case "Update Profile":
-                        intent = new Intent(ProviderSettingsActivity.this, CustomerUpdateProfileActivity.class);
+                        intent = new Intent(ProviderSettingsActivity.this, ProviderUpdateProfileActivity.class);
                         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         startActivity(intent);
                         break;
                     case "Update Notifications":
-                        intent = new Intent(ProviderSettingsActivity.this, CustomerUpdateNotificationsActivity.class);
+                        intent = new Intent(ProviderSettingsActivity.this, ProviderUpdateNotificationsActivity.class);
                         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         startActivity(intent);
                         break;
@@ -63,6 +64,12 @@ public class ProviderSettingsActivity extends AppCompatActivity {
                         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         startActivity(intent);
                         break;
+                    case "Private Information":
+                        intent = new Intent(ProviderSettingsActivity.this, ProviderPrivateInformationActivity.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(intent);
+                        break;
+
                 }
             }
         });

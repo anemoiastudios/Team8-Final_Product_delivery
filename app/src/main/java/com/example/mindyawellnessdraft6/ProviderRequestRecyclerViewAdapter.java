@@ -1,5 +1,6 @@
 package com.example.mindyawellnessdraft6;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.text.Layout;
 import android.view.LayoutInflater;
@@ -13,12 +14,17 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.textview.MaterialTextView;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
 public class ProviderRequestRecyclerViewAdapter extends RecyclerView.Adapter<ProviderRequestRecyclerViewAdapter.ViewHolder>{
 
-    private ArrayList<CustomerRequest> customerRequests = new ArrayList<>();
+    private ArrayList<Appointment> customerRequests = new ArrayList<>();
     private Context context;
 
     public ProviderRequestRecyclerViewAdapter(Context context){
@@ -35,21 +41,53 @@ public class ProviderRequestRecyclerViewAdapter extends RecyclerView.Adapter<Pro
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.providerRequestCustomerNameTextView.setText(customerRequests.get(position).getCustomerName());
-        holder.providerRequestDateTextView.setText(customerRequests.get(position).getMeetingDate());
+    public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("users").child(customerRequests.get(position).getCustomerUid());
+
+        databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                String firstName = snapshot.child("privateInfo").child("firstName").getValue().toString();
+                String lastName = snapshot.child("privateInfo").child("lastName").getValue().toString();
+                String fullName = firstName +  " " + lastName;
+                holder.providerRequestCustomerNameTextView.setText(fullName);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        holder.providerRequestDateTextView.setText(customerRequests.get(position).getAppointmentDate() + " " + customerRequests.get(position).getAppointmentTime());
 
         holder.providerRequestCheckImageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                // If accepts, change value to 1 and have it displayed on customer side and display on provider side
                 Toast.makeText(context, "You accepted", Toast.LENGTH_SHORT).show();
+
+                String appointmentId = customerRequests.get(position).getAppointmentId();
+                DatabaseReference appointmentDatabaseReference = FirebaseDatabase.getInstance().getReference().child("appointments").child(appointmentId);
+
+                appointmentDatabaseReference.child("providerAccepted").setValue("1");
+
+                notifyDataSetChanged();
             }
         });
 
         holder.providerRequestDenyImageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                // If denied, delete the appointment from appointment folder
                 Toast.makeText(context, "You declined", Toast.LENGTH_SHORT).show();
+
+                String appointmentId = customerRequests.get(position).getAppointmentId();
+                DatabaseReference appointmentDatabaseReference = FirebaseDatabase.getInstance().getReference().child("appointments").child(appointmentId);
+
+                appointmentDatabaseReference.removeValue();
+
+                notifyDataSetChanged();
             }
         });
 
@@ -60,8 +98,10 @@ public class ProviderRequestRecyclerViewAdapter extends RecyclerView.Adapter<Pro
         return customerRequests.size();
     }
 
-    public void setCustomerRequests(ArrayList<CustomerRequest> customerRequests){
+    public void setCustomerRequests(ArrayList<Appointment> customerRequests){
         this.customerRequests = customerRequests;
+
+        notifyDataSetChanged();
 
     }
 

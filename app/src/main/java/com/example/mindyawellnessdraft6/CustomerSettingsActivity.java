@@ -3,7 +3,12 @@ package com.example.mindyawellnessdraft6;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.app.AlarmManager;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -78,4 +83,6 @@ public class CustomerSettingsActivity extends AppCompatActivity {
 
 
     }
+
+
 }

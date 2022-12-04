@@ -62,7 +62,26 @@
                 android:id="@+id/providerCreateDiscussionDateEditText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:inputType="datetime"/>
+                android:inputType="none"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/providerCreateDiscussionTimeInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:hint="Discussion Time"
+            android:layout_marginTop="10dp"
+
+            android:layout_below="@+id/providerCreateDiscussionDateInputLayout"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/providerCreateDiscussionTimeEditText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="none"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -74,14 +93,14 @@
             android:hint="Discussion Description"
             android:layout_marginTop="10dp"
 
-            android:layout_below="@+id/providerCreateDiscussionDateInputLayout"
+            android:layout_below="@+id/providerCreateDiscussionTimeInputLayout"
             >
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/emailCustomerSignUpEditText"
+                android:id="@+id/discussionDescription"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:inputType="datetime"/>
+                />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.button.MaterialButton
@@ -89,14 +108,18 @@
             android:layout_width="250dp"
             android:layout_height="wrap_content"
 
-            android:text="Create discussion"
-            android:textAllCaps="false"
-            android:textSize="20dp"
+            android:layout_below="@+id/providerCreateDiscussionDate"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
             android:padding="8dp"
 
-            android:layout_marginTop="10dp"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/providerCreateDiscussionDate"
+            android:text="Create discussion"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            app:backgroundTint="#E6E6FA"
+            app:strokeColor="#E0AA3E"
+            app:strokeWidth="0.5dp"
 
             />
 

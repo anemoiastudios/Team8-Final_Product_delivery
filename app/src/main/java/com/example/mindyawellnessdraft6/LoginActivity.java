@@ -83,12 +83,12 @@ public class LoginActivity extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if(task.isSuccessful()){
                                 String userUID = FirebaseAuth.getInstance().getCurrentUser().getUid();
-                                DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("Users").child(userUID);
+                                DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("users").child(userUID);
 
-                                databaseReference.addValueEventListener(new ValueEventListener() {
+                                databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
                                     @Override
                                     public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                        String userType = snapshot.child("userType").getValue().toString();
+                                        String userType = snapshot.child("credentials").child("userType").getValue().toString();
 
                                         if(userType.equals("CUSTOMER")){
                                             Intent intent = new Intent(LoginActivity.this, CustomerMainActivity.class);

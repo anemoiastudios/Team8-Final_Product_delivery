@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProviderUpdateNotificationsActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/providerUpdateNotificationsAppBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/providerUpdateNotificationsToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            app:title="Update Notifications"
+            app:titleCentered="true"
+            app:titleTextColor="@color/white"
+            app:navigationIcon="@drawable/ic_baseline_arrow_back_ios_24"
+            />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/providerUpdateNotificationsAppBarLayout"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp">
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/providerSetPushNotificationsSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:checked="true"
+
+            android:text="Set Push Notifications"
+            android:textSize="18dp"
+
+            />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/providerSetReminder1on1NotificationsSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@+id/providerSetPushNotificationsSwitch"
+
+            android:checked="true"
+            android:text="Set Reminders for 1 on 1 Appointments"
+
+            android:textSize="18dp"
+
+            />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/providerSetReminderGroupNotificationsSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@+id/providerSetReminder1on1NotificationsSwitch"
+
+            android:checked="true"
+            android:text="Set Reminders for Group Appointments"
+
+            android:textSize="18dp"
+
+            />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/providerSetMessagingNotificationsSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@+id/providerSetReminderGroupNotificationsSwitch"
+
+            android:checked="true"
+            android:text="Set Notifications for Messages"
+
+            android:textSize="18dp"
+
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/providerUpdateNotificationsSaveButton"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:padding="8dp"
+            android:text="Save"
+
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            app:backgroundTint="#E6E6FA"
+            app:strokeColor="#E0AA3E"
+            app:strokeWidth="0.5dp"
+
+            />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

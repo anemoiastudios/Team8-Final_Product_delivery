@@ -4,9 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../../../layout/custom_preview.xml" value="0.10371702637889688" />
-        <entry key="..\:/Users/Owner/AndroidStudioProjects/mindyawellness/app/src/main/res/layout/activity_customer_update_notifications.xml" value="0.35507246376811596" />
-        <entry key="..\:/Users/Owner/AndroidStudioProjects/mindyawellness/app/src/main/res/layout/activity_login.xml" value="0.35507246376811596" />
         <entry key="app/src/main/res/drawable/ic_baseline_more_horiz_24.xml" value="0.173" />
+        <entry key="app/src/main/res/layout/activity_appointment_entry.xml" value="0.25364583333333335" />
         <entry key="app/src/main/res/layout/activity_customer_allergies.xml" value="0.25364583333333335" />
         <entry key="app/src/main/res/layout/activity_customer_appointment.xml" value="0.23958333333333334" />
         <entry key="app/src/main/res/layout/activity_customer_chat_with_provider.xml" value="0.26941086527650393" />
@@ -31,15 +30,22 @@
         <entry key="app/src/main/res/layout/activity_customer_symptoms.xml" value="0.25364583333333335" />
         <entry key="app/src/main/res/layout/activity_customer_update_notifications.xml" value="0.25364583333333335" />
         <entry key="app/src/main/res/layout/activity_customer_update_profile.xml" value="0.26407012939453123" />
+        <entry key="app/src/main/res/layout/activity_discussion_entry.xml" value="0.25364583333333335" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.25364583333333335" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25364583333333335" />
         <entry key="app/src/main/res/layout/activity_provider_appointment.xml" value="0.25364583333333335" />
+        <entry key="app/src/main/res/layout/activity_provider_appointment_accept_decline.xml" value="0.25364583333333335" />
         <entry key="app/src/main/res/layout/activity_provider_chat_with_customer.xml" value="0.25364583333333335" />
         <entry key="app/src/main/res/layout/activity_provider_create_discussion.xml" value="0.23958333333333334" />
+        <entry key="app/src/main/res/layout/activity_provider_customer_edit_information.xml" value="0.24626159667968753" />
         <entry key="app/src/main/res/layout/activity_provider_customer_profile.xml" value="0.23958333333333334" />
         <entry key="app/src/main/res/layout/activity_provider_main.xml" value="0.25364583333333335" />
+        <entry key="app/src/main/res/layout/activity_provider_private_information.xml" value="0.25364583333333335" />
+        <entry key="app/src/main/res/layout/activity_provider_reset_password.xml" value="0.25364583333333335" />
         <entry key="app/src/main/res/layout/activity_provider_settings.xml" value="0.25364583333333335" />
         <entry key="app/src/main/res/layout/activity_provider_sign_up.xml" value="0.25364583333333335" />
+        <entry key="app/src/main/res/layout/activity_provider_update_notifications.xml" value="0.25364583333333335" />
+        <entry key="app/src/main/res/layout/activity_provider_update_profile.xml" value="0.23958333333333334" />
         <entry key="app/src/main/res/layout/activity_recovery_account.xml" value="0.25364583333333335" />
         <entry key="app/src/main/res/layout/activity_reset_password.xml" value="0.25364583333333335" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.26316274007161455" />
@@ -52,9 +58,11 @@
         <entry key="app/src/main/res/layout/fragment_provider_appointments.xml" value="0.23958333333333334" />
         <entry key="app/src/main/res/layout/fragment_provider_customers.xml" value="0.23958333333333334" />
         <entry key="app/src/main/res/layout/fragment_provider_home.xml" value="0.25364583333333335" />
+        <entry key="app/src/main/res/layout/join_zoom_meeting.xml" value="0.25364583333333335" />
         <entry key="app/src/main/res/layout/list_credentials.xml" value="0.25364583333333335" />
         <entry key="app/src/main/res/layout/list_customer_appointments_card.xml" value="0.2697255452473958" />
         <entry key="app/src/main/res/layout/list_customer_more_card.xml" value="0.25364583333333335" />
+        <entry key="app/src/main/res/layout/list_customer_provider_card.xml" value="0.25364583333333335" />
         <entry key="app/src/main/res/layout/list_customer_provider_profile_discussion.xml" value="0.2526041666666667" />
         <entry key="app/src/main/res/layout/list_gender.xml" value="0.25364583333333335" />
         <entry key="app/src/main/res/layout/list_provider_appointments_card.xml" value="0.2526041666666667" />

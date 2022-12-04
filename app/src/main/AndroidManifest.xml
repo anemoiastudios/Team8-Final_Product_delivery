@@ -4,6 +4,9 @@
     package="com.example.mindyawellnessdraft6">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
 
     <application
         android:allowBackup="true"
@@ -14,12 +17,66 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MindYaWellnessDraft6"
+        tools:replace="allowBackup"
         tools:targetApi="31">
+        <activity
+            android:name=".DiscussionEntryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MoreBipolarActivity"
+            android:exported="false" />
+        <activity android:name=".MoreInsuranceActivity" />
+        <activity
+            android:name=".MoreRentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MoreSchoolingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MoreMentalWellnessPlanningAcitivity"
+            android:exported="false" />
+        <activity
+            android:name=".MoreCarAccidentTraumaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MoreBloodPressureRecoveryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MoreBrainInjuryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MoreFoodSheltersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MoreGrantsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MoreAnxiety"
+            android:exported="false" />
+        <activity android:name=".MoreLocalSheltersActivity" />
+        <activity
+            android:name=".ProviderPrivateInformationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProviderResetPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProviderUpdateNotificationsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProviderUpdateProfileActivity"
+            android:exported="false" />
         <activity
             android:name=".ProviderChatWithCustomerActivity"
             android:exported="false" />
         <activity
+            android:name=".ProviderAppointmentAcceptDeclineActivity"
+            android:exported="false" />
+        <activity
             android:name=".ProviderCustomerProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProviderCustomerEditInformation"
             android:exported="false" />
         <activity
             android:name=".ProviderCreateDiscussionActivity"
@@ -34,7 +91,7 @@
             android:name=".CustomerMoreEntriesActivity"
             android:exported="false" />
         <activity
-            android:name=".CustomerAppointmentActivity"
+            android:name=".AppointmentEntryActivity"
             android:exported="false" />
         <activity
             android:name=".CustomerInstantChattingActivity"
@@ -126,6 +183,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <receiver android:name=".CustomerReminder"/>
+        <receiver android:name=".ProviderReminder"/>
+
     </application>
 
 </manifest>

@@ -22,15 +22,19 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 import org.w3c.dom.Text;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class CustomerEvaluationFormActivity extends AppCompatActivity {
 
     private TextInputEditText firstNamePEEditText;
     private TextInputEditText lastNamePEEditText;
+    private TextInputEditText agePEEditText;
     private TextInputEditText addressPEEditText;
     private TextInputEditText zipCodePEEditText;
     private TextInputEditText cityPEEditText;
@@ -57,6 +61,7 @@ public class CustomerEvaluationFormActivity extends AppCompatActivity {
 
     private FirebaseAuth firebaseAuth;
     private DatabaseReference databaseReference;
+    // private StorageReference storageReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +70,7 @@ public class CustomerEvaluationFormActivity extends AppCompatActivity {
 
         firstNamePEEditText = findViewById(R.id.firstNamePEEditText);
         lastNamePEEditText = findViewById(R.id.lastNamePEEditText);
+        agePEEditText = findViewById(R.id.agePEEditText);
         addressPEEditText = findViewById(R.id.addressPEEditText);
         zipCodePEEditText = findViewById(R.id.zipCodePEEditText);
         cityPEEditText = findViewById(R.id.cityPEEditText);
@@ -98,6 +104,7 @@ public class CustomerEvaluationFormActivity extends AppCompatActivity {
 
         firebaseAuth = FirebaseAuth.getInstance();
         databaseReference = FirebaseDatabase.getInstance().getReference();
+        // storageReference = FirebaseStorage.getInstance().getReference();
 
         finishEvaluationFormButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -109,6 +116,7 @@ public class CustomerEvaluationFormActivity extends AppCompatActivity {
 
                 String firstName = firstNamePEEditText.getText().toString();
                 String lastName = lastNamePEEditText.getText().toString();
+                String age = agePEEditText.getText().toString();
                 String address = addressPEEditText.getText().toString();
                 String zipCode = zipCodePEEditText.getText().toString();
                 String city = cityPEEditText.getText().toString();
@@ -130,7 +138,7 @@ public class CustomerEvaluationFormActivity extends AppCompatActivity {
                 String medications = medicationsPETextInputLayoutPEEditText.getText().toString();
                 String symptoms = symptomsPETextInputLayoutPEEditText.getText().toString();
 
-                if(firstName.length() == 0 || lastName.length() == 0 || address.length() == 0 || zipCode.length() == 0 || city.length() == 0 || state.length() == 0 || phoneNumber.length() == 0 || gender.length() == 0){
+                if(firstName.length() == 0 || lastName.length() == 0 || age.length() == 0 || address.length() == 0 || zipCode.length() == 0 || city.length() == 0 || state.length() == 0 || phoneNumber.length() == 0 || gender.length() == 0){
                     Toast.makeText(CustomerEvaluationFormActivity.this, "Make sure you enter something in for each", Toast.LENGTH_SHORT).show();
 
                 } else if(dateOfBirth.length () == 0 || height.length () == 0 || weight.length () == 0 || BMI.length () == 0 || bloodPressure.length () == 0){
@@ -143,18 +151,81 @@ public class CustomerEvaluationFormActivity extends AppCompatActivity {
                     firebaseAuth.createUserWithEmailAndPassword(email, password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                         @Override
                         public void onSuccess(AuthResult authResult) {
-                            HashMap<String, Object> h = new HashMap<>();
+                            HashMap<String, Object> credentials = new HashMap<>();
 
-                            h.put("email", email);
-                            h.put("userType", "CUSTOMER");
-                            h.put("uid", firebaseAuth.getCurrentUser().getUid());
+                            credentials.put("email", email);
+                            credentials.put("password", password);
+                            credentials.put("userType", "CUSTOMER");
+                            credentials.put("uid", firebaseAuth.getCurrentUser().getUid());
 
                             // Add to the database of the current user.
 
+                            HashMap<String, Object> profileInfo = new HashMap<>();
+                            profileInfo.put("status", "");
+                            profileInfo.put("mood", "");
+                            profileInfo.put("bio", "");
+                            profileInfo.put("lookingFor", "");
+                            profileInfo.put("profileImageUri", "");
+
+                            HashMap<String, Object> privateInfo = new HashMap<>();
+
+                            privateInfo.put("firstName", firstName);
+                            privateInfo.put("lastName", lastName);
+                            privateInfo.put("age", age);
+                            privateInfo.put("address", address);
+                            privateInfo.put("zipCode", zipCode);
+                            privateInfo.put("city", city);
+                            privateInfo.put("state", state);
+                            privateInfo.put("phoneNumber", phoneNumber);
+                            privateInfo.put("gender", gender);
+                            privateInfo.put("dateOfBirth", dateOfBirth);
+                            privateInfo.put("height", height);
+                            privateInfo.put("weight", weight);
+                            privateInfo.put("BMI", BMI);
+                            privateInfo.put("bloodPressure", bloodPressure);
+
+                            if(insuranceCompany.isEmpty()){
+                                privateInfo.put("insuranceCompany", "");
+                            } else {
+                                privateInfo.put("insuranceCompany", insuranceCompany);
+                            }
+
+                            if(insuranceID.isEmpty()){
+                                privateInfo.put("insuranceID", "");
+                            } else {
+                                privateInfo.put("insuranceID", insuranceID);
+                            }
+
+                            privateInfo.put("allergies", allergies);
+                            privateInfo.put("conditions", conditions);
+                            privateInfo.put("medications", medications);
+                            privateInfo.put("symptoms", symptoms);
+                            privateInfo.put("medicalHistory", "");
+                            privateInfo.put("doctorsNote", "");
+
+                            // Appointments
+                            HashMap<String, Object> appointmentInfo = new HashMap<>();
+                            CustomerAppointment testAppointment = new CustomerAppointment("Welcome","01/23/22","Mind Ya Wellness","0");
+                            appointmentInfo.put("0", testAppointment);
+
+                            // Bookmarked Providers
+                            HashMap<String, Object> bookmarkedProviderInfo = new HashMap<>();
+                            Provider mindYaWellnessProvider = new Provider("Mind Ya Wellness", "Welcome", "0");
+                            bookmarkedProviderInfo.put("0", mindYaWellnessProvider);
 
                             // -----
 
-                            databaseReference.child("Users").child(firebaseAuth.getCurrentUser().getUid()).setValue(h).addOnCompleteListener(new OnCompleteListener<Void>() {
+                            // storageReference.child("users").child(firebaseAuth.getCurrentUser().getUid()).child(firebaseAuth.getCurrentUser().getUid() + "pp.jpeg");
+
+                            databaseReference.child("users").child(firebaseAuth.getCurrentUser().getUid()).child("credentials").setValue(credentials);
+
+                            databaseReference.child("users").child(firebaseAuth.getCurrentUser().getUid()).child("profileInfo").setValue(profileInfo);
+
+                            databaseReference.child("users").child(firebaseAuth.getCurrentUser().getUid()).child("appointmentInfo").setValue(appointmentInfo);
+
+                            databaseReference.child("users").child(firebaseAuth.getCurrentUser().getUid()).child("bookmarkedProviderInfo").setValue(bookmarkedProviderInfo);
+
+                            databaseReference.child("users").child(firebaseAuth.getCurrentUser().getUid()).child("privateInfo").setValue(privateInfo).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     Toast.makeText(CustomerEvaluationFormActivity.this, "Successfully signed up as customer", Toast.LENGTH_SHORT).show();
@@ -163,6 +234,7 @@ public class CustomerEvaluationFormActivity extends AppCompatActivity {
                                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                     startActivity(intent);
                                     finish();
+
                                 }
                             });
 
@@ -170,6 +242,7 @@ public class CustomerEvaluationFormActivity extends AppCompatActivity {
                     }).addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) {
+                            Toast.makeText(CustomerEvaluationFormActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
 
                         }
                     });

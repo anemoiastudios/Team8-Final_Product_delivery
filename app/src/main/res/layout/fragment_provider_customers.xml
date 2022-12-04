@@ -6,6 +6,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ProviderCustomersFragment">
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/instantChattingButton"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:padding="8dp"
+        android:text="24/7 Instant Chatting"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:backgroundTint="#E6E6FA"
+        app:strokeColor="#E0AA3E"
+        app:strokeWidth="0.5dp" />
+
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/providerCustomersAppBarLayout"
         android:layout_width="match_parent"
@@ -18,14 +34,15 @@
             app:titleCentered="true"
             app:titleTextColor="@color/white"
             />
+
     </com.google.android.material.appbar.AppBarLayout>
 
     <ListView
         android:id="@+id/providerCustomerListView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="611dp"
         android:layout_below="@+id/providerCustomersAppBarLayout"
 
-        />
+        android:layout_marginTop="64dp" />
 
 </RelativeLayout>
