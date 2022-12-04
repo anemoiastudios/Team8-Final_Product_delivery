@@ -12,6 +12,7 @@ import android.widget.TextView;
 import com.firebase.ui.database.FirebaseListAdapter;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
@@ -23,7 +24,7 @@ public class CustomerChatWithProviderActivity extends AppCompatActivity {
 
     private MaterialToolbar customerChatWithProviderMaterialToolbar;
     private TextInputEditText message;
-    private MaterialButton fab;
+    private FloatingActionButton fab;
     private FirebaseListAdapter<Message> adapter;
     private FirebaseAuth auth;
     private DatabaseReference databaseReference;
